@@ -1,12 +1,20 @@
 # Changelog
 
-## [0.1.14a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.14a1) (2024-12-02)
+## [0.1.15a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.15a1) (2025-01-25)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.13...0.1.14a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.15a1...0.1.15a1)
 
 **Merged pull requests:**
 
-- import basque translations [\#39](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/39) ([JarbasAl](https://github.com/JarbasAl))
+- fix automations [\#42](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/42) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.15a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.15a1) (2024-12-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.14...0.1.15a1)
+
+**Merged pull requests:**
+
+- de-de/translate [\#41](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/41) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
