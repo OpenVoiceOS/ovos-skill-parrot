@@ -1,0 +1,18 @@
+{
+  "StopKeyword.voc": [
+    "stopp\nstoppe",
+    "[UNUSED]",
+    "aus",
+    "abbrechen",
+    "offline",
+    "abbrechen",
+    "deaktiviere\ndeaktivieren"
+  ],
+  "ParrotKeyword.voc": [
+    "Papagei",
+    "nachplappern",
+    "wiederhole, was ich sage",
+    "alles wiederholen",
+    "mich zu wiederholen"
+  ]
+}

@@ -1,12 +1,12 @@
 {
   "repeat.tts.intent": [
-    "Què (m'|)(has dit|acabes de dir)(?!)",
-    "Repeteix el que (acabes de dir|has dit) (ara|)(.|)",
-    "Pots repetir això(?|)",
-    "Repeteix això(.|)",
+    "Què (m'|)(has dit|acabes de dir)",
+    "Repeteix el que (acabes de dir|has dit) (ara|)",
+    "Pots repetir això",
+    "Repeteix això",
     "(Pots dir|digues) (això|açò) (una|) altra vegada?",
-    "(Digues|Diga|Digue)-ho (una altra vegada|una vegada més)(.|)",
-    "Què ha (estat|sigut) això(?|)",
+    "(Digues|Diga|Digue)-ho (una altra vegada|una vegada més)",
+    "Què ha (estat|sigut) això",
     "(Torna-hi|Repeteix-ho|Repeteix)"
   ],
   "start_parrot.intent": [
@@ -33,7 +33,7 @@
     "deixa de repetir-me"
   ],
   "repeat.stt.intent": [
-    "Què acabo de dir(-te)(?|)",
+    "Què acabo de dir(-te)",
     "Què penses que he dit?",
     "Què m'has sentit dir?",
     "(Digues-me|Diga'm|Dis-me|Digues) què (acabo de dir|he dit)."
@@ -43,6 +43,6 @@
     "(digues|repeteix|repetix) {sentence} (després de mi|)"
   ],
   "did.you.hear.me.intent": [
-    "(Pots (escoltar|sentir)(-me| això)|M'has (sentit|escoltat)|Em (sents|escoltes))(?|)"
+    "(Pots (escoltar|sentir)(-me| això)|M'has (sentit|escoltat)|Em (sents|escoltes))"
   ]
 }
