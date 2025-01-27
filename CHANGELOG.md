@@ -1,11 +1,12 @@
 # Changelog
 
-## [0.1.15a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.15a1) (2025-01-25)
+## [0.1.15a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.15a2) (2025-01-27)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.15a1...0.1.15a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.15a1...0.1.15a2)
 
 **Merged pull requests:**
 
+- Ca fixes [\#43](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/43) ([JarbasAl](https://github.com/JarbasAl))
 - fix automations [\#42](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/42) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.15a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.15a1) (2024-12-04)
