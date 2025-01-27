@@ -1,11 +1,11 @@
 {
   "repeat.tts.intent": [
-    "Què (m'|)(has dit|acabes de dir)(?!)",
-    "Repeteix el que (acabes de dir|has dit) (ara|)(.|)",
+    "Què (m'|)(has dit|acabes de dir)",
+    "Repeteix el que (acabes de dir|has dit) (ara|)",
     "Pots repetir això",
-    "Repeteix això(.|)",
+    "Repeteix això",
     "(Pots dir|digues) (això|açò) (una|) altra vegada?",
-    "(Digues|Diga|Digue)-ho (una altra vegada|una vegada més)(.|)",
+    "(Digues|Diga|Digue)-ho (una altra vegada|una vegada més)",
     "Què ha (estat|sigut) això",
     "(Torna-hi|Repeteix-ho|Repeteix)"
   ],
