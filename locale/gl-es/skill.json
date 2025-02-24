@@ -1,0 +1,24 @@
+{
+  "skill_id": "skill-ovos-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/skill-ovos-parrot",
+  "name": "Papagaio",
+  "description": "Converte OpenVoiceOS nun papagaio imitador! Fai que OVOS repita o que queiras.",
+  "examples": [
+    "di Boas noites, Ana",
+    "repite Unha vez, nunha lúgubre medianoite, en canto cavilaba, débil e canso, nun moi vello e raro libro de saber esquecido",
+    "di podo dicir o que queiras!",
+    "Repite o que acabas de dicir",
+    "Repite iso",
+    "Podes repetir iso?",
+    "Que acabo de dicir?",
+    "Dime o que acabo de dicir.",
+    "comezar papagaio",
+    "parar papagaio"
+  ],
+  "tags": [
+    "papagaio",
+    "eco",
+    "repetidor",
+    "entretemento"
+  ]
+}

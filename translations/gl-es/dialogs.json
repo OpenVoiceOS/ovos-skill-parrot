@@ -1,50 +1,50 @@
 {
-    "did.hear.dialog": [
-        "Si, ho.",
-        "Si."
-    ],
-    "did.not.hear.dialog": [
-        "Non. Non te ouvín.",
-        "Non. Penso que non te ouvín."
-    ],
-    "repeat.stt.old.dialog": [
-        "Hai un cacho dixeches. {stt}.",
-        "O último que dixeches foi {stt}."
-    ],
-    "nothing.dialog": [
-        "nada"
-    ],
-    "repeat.tts.dialog": [
-        "Acabo de dicir. {tts}",
-        "Dixen. {tts}"
-    ],
-    "please.repeat.dialog": [
-        "Podes repetir iso?",
-        "Que dixeches?"
-    ],
-    "parrot_stop.dialog": [
-        "Vou parar de repetir o que digas",
-        "Modo papagaio desactivado",
-        "Modo papagaio apagado",
-        "Modo papagaio detido",
-        "Modo papagaio parado"
-    ],
-    "repeat.stt.dialog": [
-        "Acabas de dicir. {stt}.",
-        "Dixeches. {stt}."
-    ],
-    "parrot_start.dialog": [
-        "Son un papagaio",
-        "Dáseme ben repetir cousas",
-        "Gústame ser un papagaio",
-        "Vou repetir o que digas",
-        "Presta ser un papagaio",
-        "Modo papagaio activado",
-        "Modo papagaio aceso",
-        "Modo papagaio accionado",
-        "Modo papagaio encendido"
-    ],
-    "not_parroting.dialog": [
-        "Non estou en modo papagaio"
-    ]
+  "did.hear.dialog": [
+    "Si, ho.",
+    "Si."
+  ],
+  "did.not.hear.dialog": [
+    "Non, penso que non te ouvín.",
+    "Non, non te ouvín."
+  ],
+  "repeat.stt.old.dialog": [
+    "O último que dixeches foi {stt}.",
+    "Hai un cacho dixeches, {stt}."
+  ],
+  "nothing.dialog": [
+    "nada"
+  ],
+  "repeat.tts.dialog": [
+    "Acabo de dicir, {tts}",
+    "Dixen, {tts}"
+  ],
+  "please.repeat.dialog": [
+    "Podes repetir iso?",
+    "Que dixeches?"
+  ],
+  "parrot_stop.dialog": [
+    "Modo papagaio desactivado",
+    "Modo papagaio detido",
+    "Modo papagaio parado",
+    "Modo papagaio apagado",
+    "Vou parar de repetir o que digas"
+  ],
+  "repeat.stt.dialog": [
+    "Acabas de dicir, {stt}.",
+    "Dixeches, {stt}."
+  ],
+  "parrot_start.dialog": [
+    "Modo papagaio activado ",
+    "Modo papagaio accionado",
+    "Modo papagaio encendido",
+    "Modo papagaio aceso",
+    "Presta ser un papagaio",
+    "Gústame ser un papagaio ",
+    "Vou repetir o que digas",
+    "Dáseme ben repetir cousas",
+    "Son un papagaio"
+  ],
+  "not_parroting.dialog": [
+    "Non estou en modo papagaio"
+  ]
 }
