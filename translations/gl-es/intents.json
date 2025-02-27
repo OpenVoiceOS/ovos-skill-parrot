@@ -1,48 +1,48 @@
 {
-    "repeat.tts.intent": [
-        "(Podes repetir|repites) (iso|)?",
-        "Podes repetir iso?",
-        "Podes repetir?",
-        "Repite iso.",
-        "Repite o que (dixeches|acabas de dicir).",
-        "Di iso (de novo|máis unha vez).",
-        "Que (acabas de dicir|me dixeches)?",
-        "Que foi?"
-    ],
-    "start_parrot.intent": [
-        "activar modo papagaio",
-        "modo papagaio activado",
-        "inicio do modo papagaio",
-        "repetir todo",
-        "repite todo o que oias",
-        "iniciar papagaio",
-        "iniciar modo papagaio",
-        "empezar a repetir"
-    ],
-    "stop_parrot.intent": [
-        "(modo papagaio | repetición ) deter",
-        "(modo papagaio | repetición ) cancelar ",
-        "(modo papagaio | repetición ) deshabilitar",
-        "(modo papagaio | repetición ) desactivar",
-        "(modo papagaio | repetición ) parar",
-        "deter (modo papagaio | repetición )",
-        "cancelar (modo papagaio | repetición )",
-        "deshabilitar (modo papagaio | repetición )",
-        "desactivar (modo papagaio | repetición )",
-        "parar (modo papagaio | repetición )",
-        "para de repetir o que digo"
-    ],
-    "repeat.stt.intent": [
-        "Dime o que (acabo de dicir|dixen).",
-        "Que (acabo de dicirche|che dixen)?",
-        "Que me oíches dicir?",
-        "Que pensaches que dixen?"
-    ],
-    "speak.intent": [
-        "(di|repite) {sentence} o que vou dicir",
-        "(di|repite|repite isto) {sentence}"
-    ],
-    "did.you.hear.me.intent": [
-        "(Podes oír|Dás oído|Oes) (me|iso|isto)?"
-    ]
+  "repeat.tts.intent": [
+    "Que (acabas de dicir|me dixeches)?",
+    "Repite o que (dixeches|acabas de dicir).",
+    "Podes repetir iso?",
+    "Repite iso.",
+    "(Podes repetir|repites) (iso|)?",
+    "Di iso (de novo|máis unha vez|outra vez).",
+    "Que foi?",
+    "Podes repetir?"
+  ],
+  "start_parrot.intent": [
+    "empezar a repetir",
+    "activar modo papagaio",
+    "modo papagaio activado",
+    "inicio do modo papagaio",
+    "iniciar modo papagaio",
+    "iniciar papagaio",
+    "repetir todo",
+    "repite todo o que oias"
+  ],
+  "stop_parrot.intent": [
+    "parar (modo papagaio | repetición )",
+    "desactivar (modo papagaio | repetición )",
+    "deter (modo papagaio | repetición )",
+    "cancelar (modo papagaio | repetición )",
+    "deshabilitar (modo papagaio | repetición )",
+    "(modo papagaio | repetición ) parar",
+    "(modo papagaio | repetición ) desactivar",
+    "(modo papagaio | repetición ) deter",
+    "(modo papagaio | repetición ) cancelar ",
+    "(modo papagaio | repetición ) deshabilitar",
+    "para de repetir o que digo"
+  ],
+  "repeat.stt.intent": [
+    "Que (acabo de dicirche|che dixen)?",
+    "Que pensaches que dixen? ",
+    "Que me oíches dicir?",
+    "Dime o que (acabo de dicir|dixen)."
+  ],
+  "speak.intent": [
+    "(di|repite) (o que vou dicir|) {sentence}",
+    "(di|repite) {sentence} despois de min"
+  ],
+  "did.you.hear.me.intent": [
+    "(Podes oír|Dás oído|Oes|Oíches) (me|iso|isto)?"
+  ]
 }

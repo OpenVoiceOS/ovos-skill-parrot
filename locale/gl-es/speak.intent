@@ -1,2 +1,2 @@
-(di|repite) {sentence} o que vou dicir
-(di|repite|repite isto) {sentence}
+(di|repite) (o que vou dicir|) {sentence}
+(di|repite) {sentence} despois de min
