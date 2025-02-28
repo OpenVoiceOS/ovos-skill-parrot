@@ -1,48 +1,48 @@
 {
-    "repeat.tts.intent": [
-        "What did you (just|) (say|tell me)?",
-        "Repeat what you (just|) said.",
-        "Can you repeat that?",
-        "Repeat that.",
-        "(Can you|) say (that|) again?",
-        "Say that (once more|one more time).",
-        "What was that?",
-        "Come again?"
+    "did.you.hear.me.intent": [
+        "(Can|Did|Do) you hear (me|that|this)"
     ],
     "start_parrot.intent": [
-        "start parroting",
         "engage parrot mode",
         "parrot mode on",
         "parrot mode start",
-        "start parrot mode",
-        "start parrot",
         "repeat everything",
-        "repeat everything you hear"
+        "repeat everything you hear",
+        "start parrot",
+        "start parrot mode",
+        "start parroting"
+    ],
+    "speak.intent": [
+        "(say|repeat|speak) {sentence} after me",
+        "(say|repeat|speak|say after me) {sentence}"
+    ],
+    "repeat.tts.intent": [
+        "(Can you|) say (that|) again",
+        "Can you repeat that",
+        "Come again",
+        "Repeat that",
+        "Repeat what you (just|) said",
+        "Say that (once more|one more time)",
+        "What did you (just|) (say|tell me)",
+        "What was that"
     ],
     "stop_parrot.intent": [
-        "stop (parrot mode | parroting )",
-        "disengage (parrot mode | parroting )",
-        "abort (parrot mode | parroting )",
-        "cancel (parrot mode | parroting )",
-        "disable (parrot mode | parroting )",
-        "(parrot mode | parroting ) stop",
-        "(parrot mode | parroting ) disengage",
         "(parrot mode | parroting ) abort",
         "(parrot mode | parroting ) cancel",
         "(parrot mode | parroting ) disable",
+        "(parrot mode | parroting ) disengage",
+        "(parrot mode | parroting ) stop",
+        "abort (parrot mode | parroting )",
+        "cancel (parrot mode | parroting )",
+        "disable (parrot mode | parroting )",
+        "disengage (parrot mode | parroting )",
+        "stop (parrot mode | parroting )",
         "stop repeating me"
     ],
     "repeat.stt.intent": [
-        "What did I (just|) (say|tell you)?",
-        "What did you think I said?",
-        "What did you hear me say?",
-        "Tell me what I (just|) said."
-    ],
-    "speak.intent": [
-        "(say|repeat|speak|say after me) {sentence}",
-        "(say|repeat|speak) {sentence} after me"
-    ],
-    "did.you.hear.me.intent": [
-        "(Can|Did|Do) you hear (me|that|this)?"
+        "Tell me what I (just|) said",
+        "What did I (just|) (say|tell you)",
+        "What did you hear me say",
+        "What did you think I said"
     ]
 }

@@ -1,48 +1,46 @@
 {
-  "repeat.tts.intent": [
-    "was hast du (gerade|) (gesagt|gemeint)?",
-    "wiederhole was du  (gerade | ) sagtest.",
-    "Kannst du das wiederholen?",
-    "Wiedehole das",
-    "Kannst du das nochmal sagen?",
-    "Sag das noch einmal",
-    "Was war das?",
-    "Wie bitte"
-  ],
-  "start_parrot.intent": [
-    "fang an zu plappern",
-    "Papageienmodus aktivieren",
-    "Papageienmodus aktivieren",
-    "Papageienmodus starten",
-    "starte Papageienmodus",
-    "Papagei starten",
-    "wiederhole alles",
-    "wiederhole alles, was du hörst"
-  ],
-  "stop_parrot.intent": [
-    "(stoppe|stopp|stop) (Papageimodus | Papagei spielen)",
-    " (Papageienmodus) abschalten",
-    "Breche (Papageimodus | Papageienmodus) ab",
-    "(Papageienmodus | Papagei spielen) abbrechen",
-    "deaktiviere (Papageimodus | Papageienmodus)",
-    "(Papageimodus | Papageienmodus) stoppen",
-    "(Papageimodus | Papageienmodus) anhalten",
-    "(Papageimodus | Papageienmodus) abbrechen",
-    "(Papageimodus | Papageienmodus) abbrechen",
-    "(Papageimodus | Papageien) deaktivieren",
-    "hör auf, mich zu wiederholen"
-  ],
-  "repeat.stt.intent": [
-    "was habe ich (dir|gerade) (gesagt|mitgeteilt)?",
-    "Was denkst du, was ich gesagt habe?",
-    "Was hast du zu mir gesagt?",
-    "sage mir was ich dir (gerade|) gesagt habe."
-  ],
-  "speak.intent": [
-    "(sage|wiederhole|spreche|sage mir nach) {Satz}",
-    "(sage|wiederhole|spreche) {Satz} "
-  ],
-  "did.you.hear.me.intent": [
-    "(kann|hast) du mir (das|)?"
-  ]
+    "did.you.hear.me.intent": [
+        "(kann|hast) du mir (das|)"
+    ],
+    "start_parrot.intent": [
+        "Papagei starten",
+        "Papageienmodus aktivieren",
+        "Papageienmodus starten",
+        "fang an zu plappern",
+        "starte Papageienmodus",
+        "wiederhole alles",
+        "wiederhole alles was du hörst"
+    ],
+    "speak.intent": [
+        "(sage|wiederhole|spreche) {Satz}",
+        "(sage|wiederhole|spreche|sage mir nach) {Satz}"
+    ],
+    "repeat.tts.intent": [
+        "Kannst du das nochmal sagen",
+        "Kannst du das wiederholen",
+        "Sag das noch einmal",
+        "Was war das",
+        "Wie bitte",
+        "Wiedehole das",
+        "was hast du (gerade|) (gesagt|gemeint)",
+        "wiederhole was du (gerade | ) sagtest"
+    ],
+    "stop_parrot.intent": [
+        "(Papageienmodus | Papagei spielen) abbrechen",
+        "(Papageienmodus) abschalten",
+        "(Papageimodus | Papageien) deaktivieren",
+        "(Papageimodus | Papageienmodus) abbrechen",
+        "(Papageimodus | Papageienmodus) anhalten",
+        "(Papageimodus | Papageienmodus) stoppen",
+        "(stoppe|stopp|stop) (Papageimodus | Papagei spielen)",
+        "Breche (Papageimodus | Papageienmodus) ab",
+        "deaktiviere (Papageimodus | Papageienmodus)",
+        "hör auf mich zu wiederholen"
+    ],
+    "repeat.stt.intent": [
+        "Was denkst du was ich gesagt habe",
+        "Was hast du zu mir gesagt",
+        "sage mir was ich dir (gerade|) gesagt habe",
+        "was habe ich (dir|gerade) (gesagt|mitgeteilt)"
+    ]
 }

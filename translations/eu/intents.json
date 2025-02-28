@@ -1,48 +1,48 @@
 {
-    "repeat.tts.intent": [
-        "Esan (al dezakezu|) berriro?",
-        "Errepikatu al dezakezu?",
-        "Berriro?",
-        "Errepikatu hori.",
-        "Errepikatu esan (berri|) duzuna.",
-        "Esan hori (beste behin|berriro).",
-        "Zer esan (berri|) (duzu|didazu)?",
-        "Zer zen hori?"
+    "did.you.hear.me.intent": [
+        "(Entzun|Entzuten) al (didazu|duzu|zenidan|zenuen)"
     ],
     "start_parrot.intent": [
         "aktibatu loro-modua",
-        "loro-modua piztuta",
-        "loro-moduaren hasiera",
         "errepikatu dena",
         "errepikatu entzuten duzun guztia",
-        "hasi loroa",
+        "hasi errepikatzen",
         "hasi loro-modua",
-        "hasi errepikatzen"
-    ],
-    "stop_parrot.intent": [
-        "(loro-modua | errepikatzea ) bertan behera utzi",
-        "(loro-modua | errepikatzea ) utzi",
-        "(loro-modua | errepikatzea ) desgaitu",
-        "(loro-modua | errepikatzea ) desaktibatu",
-        "(loro-modua | errepikatzea ) gelditu",
-        "utzi bertan behera (loro-modua | errepikatzea )",
-        "utzi (loro-modua | errepikatzea )",
-        "desgaitu (loro-modua | errepikatzea )",
-        "desaktibatu (loro-modua | errepikatzea )",
-        "gelditu (loro-modua | errepikatzea )",
-        "gelditu nik esandakoa errepikatzen"
-    ],
-    "repeat.stt.intent": [
-        "esadazu zer esan (berri|) dudan.",
-        "Zer esan (berri|) (dut|dizut)?",
-        "Zer entzun didazu esaten?",
-        "Zer uste duzu esan dudala?"
+        "hasi loroa",
+        "loro-modua piztuta",
+        "loro-moduaren hasiera"
     ],
     "speak.intent": [
         "(esan|errepikatu) {sentence} nire ondoren",
         "(esan|errepikatu|esan nire ondoren) {sentence}"
     ],
-    "did.you.hear.me.intent": [
-        "(Entzun|Entzuten) al (didazu|duzu|zenidan|zenuen)?"
+    "repeat.tts.intent": [
+        "Berriro",
+        "Errepikatu al dezakezu",
+        "Errepikatu esan (berri|) duzuna",
+        "Errepikatu hori",
+        "Esan (al dezakezu|) berriro",
+        "Esan hori (beste behin|berriro)",
+        "Zer esan (berri|) (duzu|didazu)",
+        "Zer zen hori"
+    ],
+    "stop_parrot.intent": [
+        "(loro-modua | errepikatzea ) bertan behera utzi",
+        "(loro-modua | errepikatzea ) desaktibatu",
+        "(loro-modua | errepikatzea ) desgaitu",
+        "(loro-modua | errepikatzea ) gelditu",
+        "(loro-modua | errepikatzea ) utzi",
+        "desaktibatu (loro-modua | errepikatzea )",
+        "desgaitu (loro-modua | errepikatzea )",
+        "gelditu (loro-modua | errepikatzea )",
+        "gelditu nik esandakoa errepikatzen",
+        "utzi (loro-modua | errepikatzea )",
+        "utzi bertan behera (loro-modua | errepikatzea )"
+    ],
+    "repeat.stt.intent": [
+        "Zer entzun didazu esaten",
+        "Zer esan (berri|) (dut|dizut)",
+        "Zer uste duzu esan dudala",
+        "esadazu zer esan (berri|) dudan"
     ]
 }

@@ -1,48 +1,48 @@
 {
-  "repeat.tts.intent": [
-    "Què (m'|)(has dit|acabes de dir)",
-    "Repeteix el que (acabes de dir|has dit) (ara|)",
-    "Pots repetir això",
-    "Repeteix això",
-    "(Pots dir|digues) (això|açò) (una|) altra vegada?",
-    "(Digues|Diga|Digue)-ho (una altra vegada|una vegada més)",
-    "Què ha (estat|sigut) això",
-    "(Torna-hi|Repeteix-ho|Repeteix)"
-  ],
-  "start_parrot.intent": [
-    "comença a (parlar com un lloro|llorar)",
-    "activa (el|es) mode lloro",
-    "mode lloro activat",
-    "inicia (el|es) mode lloro",
-    "comença (el|es) mode lloro",
-    "comença (el|es) lloro",
-    "(repetix|repeteix)-ho tot",
-    "(repeteix|repetix) tot (el|lo) que (escoltes|escoltis|sentis)"
-  ],
-  "stop_parrot.intent": [
-    "(para|atura) (el|es) (mode lloro|lloro)",
-    "(desenganxa|desactiva) (el|es) (mode lloro|lloro)",
-    "avorta (el|es) (mode lloro|lloro)",
-    "cancel·la (el|es) (mode lloro|lloro)",
-    "desactiva (el|es) (mode lloro|lloro)",
-    "(mode lloro|lloro) (para|atura)('l|)",
-    "(mode lloro|lloro) (desenganxa)('l|)",
-    "(mode lloro|lloro) (avorta)('l|)",
-    "(mode lloro|lloro) (cancel·la|anul·la)('l|)",
-    "(mode lloro|lloro) (desactiva)('l|)",
-    "deixa de repetir-me"
-  ],
-  "repeat.stt.intent": [
-    "Què acabo de dir(-te)",
-    "Què penses que he dit?",
-    "Què m'has sentit dir?",
-    "(Digues-me|Diga'm|Dis-me|Digues) què (acabo de dir|he dit)."
-  ],
-  "speak.intent": [
-    "(digues|repeteix|repetix) (després de mi|) {sentence}",
-    "(digues|repeteix|repetix) {sentence} (després de mi|)"
-  ],
-  "did.you.hear.me.intent": [
-    "(Pots (escoltar|sentir)(-me| això)|M'has (sentit|escoltat)|Em (sents|escoltes))"
-  ]
+    "did.you.hear.me.intent": [
+        "(Pots (escoltar|sentir)(-me| això)|M'has (sentit|escoltat)|Em (sents|escoltes))"
+    ],
+    "start_parrot.intent": [
+        "(repeteix|repetix) tot (el|lo) que (escoltes|escoltis|sentis)",
+        "(repetix|repeteix)-ho tot",
+        "activa (el|es) mode lloro",
+        "comença (el|es) lloro",
+        "comença (el|es) mode lloro",
+        "comença a (parlar com un lloro|llorar)",
+        "inicia (el|es) mode lloro",
+        "mode lloro activat"
+    ],
+    "speak.intent": [
+        "(digues|repeteix|repetix) (després de mi|) {sentence}",
+        "(digues|repeteix|repetix) {sentence} (després de mi|)"
+    ],
+    "repeat.tts.intent": [
+        "(Digues|Diga|Digue)-ho (una altra vegada|una vegada més)",
+        "(Pots dir|digues) (això|açò) (una|) altra vegada",
+        "(Torna-hi|Repeteix-ho|Repeteix)",
+        "Pots repetir això",
+        "Què (m'|)(has dit|acabes de dir)",
+        "Què ha (estat|sigut) això",
+        "Repeteix això",
+        "Repeteix el que (acabes de dir|has dit) (ara|)"
+    ],
+    "stop_parrot.intent": [
+        "(desenganxa|desactiva) (el|es) (mode lloro|lloro)",
+        "(mode lloro|lloro) (avorta)('l|)",
+        "(mode lloro|lloro) (cancel·la|anul·la)('l|)",
+        "(mode lloro|lloro) (desactiva)('l|)",
+        "(mode lloro|lloro) (desenganxa)('l|)",
+        "(mode lloro|lloro) (para|atura)('l|)",
+        "(para|atura) (el|es) (mode lloro|lloro)",
+        "avorta (el|es) (mode lloro|lloro)",
+        "cancel·la (el|es) (mode lloro|lloro)",
+        "deixa de repetir-me",
+        "desactiva (el|es) (mode lloro|lloro)"
+    ],
+    "repeat.stt.intent": [
+        "(Digues-me|Diga'm|Dis-me|Digues) què (acabo de dir|he dit)",
+        "Què acabo de dir(-te)",
+        "Què m'has sentit dir",
+        "Què penses que he dit"
+    ]
 }

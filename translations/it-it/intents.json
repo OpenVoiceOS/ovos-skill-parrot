@@ -1,48 +1,40 @@
 {
-  "repeat.tts.intent": [
-    "(Che|) cosa (mi|) hai (appena|) detto?",
-    "(Ripeti|Ridimmi) quello che hai (appena|) detto.",
-    "Puoi (ripetere|ripeterlo|ridirlo|ridire)?",
-    "(Ripeti|Ripetilo|Ridimmi|Ridimmelo).",
-    "(Puoi|) (ri|)(dire|dirlo|dillo|dì) (quello|l'ultima cosa) (di nuovo|nuovamente|ancora)?",
-    "(Dil|Ripeti)l(a|o) (ancora|) (una volta|un'altra volta|).",
-    "(Che cos'era questo?|Eh?)",
-    "(Di nuovo?|Nuovamente?)"
-  ],
-  "start_parrot.intent": [
-    "inizia a ripetere a pappagallo",
-    "attiva la ripetizione a pappagallo",
-    "attiva la modalità pappagallo",
-    "avvia la ripetizione a pappagallo",
-    "avvia la modalità pappagallo",
-    "inizia a fare il pappagallo",
-    "ripeti tutto",
-    "ripeti (tutto quello|ciò) che senti"
-  ],
-  "stop_parrot.intent": [
-    "non registrare più",
-    "ferma la registrazione",
-    "smetti di registrare",
-    "[UNUSED]",
-    "[UNUSED]",
-    "[UNUSED]",
-    "[UNUSED]",
-    "[UNUSED]",
-    "[UNUSED]",
-    "[UNUSED]",
-    "[UNUSED]"
-  ],
-  "repeat.stt.intent": [
-    "che cosa (ti|) ho detto?",
-    "ripeti cosa ho (appena) detto",
-    "cosa ho appena detto?",
-    "ripeti cosa hai sentito"
-  ],
-  "speak.intent": [
-    "ripeti {sentence}",
-    "di(mmi|) {sentence}"
-  ],
-  "did.you.hear.me.intent": [
-    "mi puoi sentire?"
-  ]
+    "did.you.hear.me.intent": [
+        "mi puoi sentire"
+    ],
+    "start_parrot.intent": [
+        "attiva la modalità pappagallo",
+        "attiva la ripetizione a pappagallo",
+        "avvia la modalità pappagallo",
+        "avvia la ripetizione a pappagallo",
+        "inizia a fare il pappagallo",
+        "inizia a ripetere a pappagallo",
+        "ripeti (tutto quello|ciò) che senti",
+        "ripeti tutto"
+    ],
+    "speak.intent": [
+        "di(mmi|) {sentence}",
+        "ripeti {sentence}"
+    ],
+    "repeat.tts.intent": [
+        "(Che cos'era questo|Eh)",
+        "(Che|) cosa (mi|) hai (appena|) detto",
+        "(Di nuovo|Nuovamente)",
+        "(Dil|Ripeti)l(a|o) (ancora|) (una volta|un'altra volta|)",
+        "(Puoi|) (ri|)(dire|dirlo|dillo|dì) (quello|l'ultima cosa) (di nuovo|nuovamente|ancora)",
+        "(Ripeti|Ridimmi) quello che hai (appena|) detto",
+        "(Ripeti|Ripetilo|Ridimmi|Ridimmelo)",
+        "Puoi (ripetere|ripeterlo|ridirlo|ridire)"
+    ],
+    "stop_parrot.intent": [
+        "ferma la registrazione",
+        "non registrare più",
+        "smetti di registrare"
+    ],
+    "repeat.stt.intent": [
+        "che cosa (ti|) ho detto",
+        "cosa ho appena detto",
+        "ripeti cosa hai sentito",
+        "ripeti cosa ho (appena) detto"
+    ]
 }

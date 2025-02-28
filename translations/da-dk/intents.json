@@ -1,48 +1,48 @@
 {
-  "repeat.tts.intent": [
-    "Hvad har du (bare|) (sagt|fortalt) (mig|)?",
-    "Gentag, hvad du (lige|) sagde.",
-    "Kan du gentage det?",
-    "Gentag det.",
-    "(Kan du|) sige (det|) igen?",
-    "Sig det (en gang til|en gang til).",
-    "Hvad var det?",
-    "Kom igen?"
-  ],
-  "start_parrot.intent": [
-    "begynd at papegøje",
-    "aktiver papegøjetilstand",
-    "papegøjetilstand til",
-    "papegøjetilstand start",
-    "start papegøjetilstand",
-    "start papegøje",
-    "gentag alt",
-    "gentag alt, hvad du hører"
-  ],
-  "stop_parrot.intent": [
-    "stop (papegøjetilstand | papegøje)",
-    "frakoble (papegøjetilstand | papegøje)",
-    "afbryde (papegøjetilstand | papegøje)",
-    "annuller (papegøjetilstand | papegøje)",
-    "deaktiver (papegøjetilstand | papegøje)",
-    "(papegøje mode | papegøje ) stop",
-    "(papegøje mode | papegøje ) frakoble",
-    "(papegøjetilstand | papegøje) afbryde",
-    "(papegøjetilstand | papegøje ) annuller",
-    "(papegøjetilstand | papegøje) deaktiver",
-    "stop med at gentage mig"
-  ],
-  "repeat.stt.intent": [
-    "Hvad har jeg (bare|) (sagt|fortalt dig)?",
-    "Hvad troede du, jeg sagde?",
-    "Hvad hørte du mig sige?",
-    "Fortæl mig, hvad jeg (lige|) sagde."
-  ],
-  "speak.intent": [
-    "(sig|gentag|tal|sig efter mig) {sætning}",
-    "(sig|gentag|tal) {sætning} efter mig"
-  ],
-  "did.you.hear.me.intent": [
-    "(Kan|Gjorde|Hørte) du (mig|at|dette)?"
-  ]
+    "did.you.hear.me.intent": [
+        "(Kan|Gjorde|Hørte) du (mig|at|dette)"
+    ],
+    "start_parrot.intent": [
+        "aktiver papegøjetilstand",
+        "begynd at papegøje",
+        "gentag alt",
+        "gentag alt hvad du hører",
+        "papegøjetilstand start",
+        "papegøjetilstand til",
+        "start papegøje",
+        "start papegøjetilstand"
+    ],
+    "speak.intent": [
+        "(sig|gentag|tal) {sætning} efter mig",
+        "(sig|gentag|tal|sig efter mig) {sætning}"
+    ],
+    "repeat.tts.intent": [
+        "(Kan du|) sige (det|) igen",
+        "Gentag det",
+        "Gentag hvad du (lige|) sagde",
+        "Hvad har du (bare|) (sagt|fortalt) (mig|)",
+        "Hvad var det",
+        "Kan du gentage det",
+        "Kom igen",
+        "Sig det (en gang til|en gang til)"
+    ],
+    "stop_parrot.intent": [
+        "(papegøje mode | papegøje ) frakoble",
+        "(papegøje mode | papegøje ) stop",
+        "(papegøjetilstand | papegøje ) annuller",
+        "(papegøjetilstand | papegøje) afbryde",
+        "(papegøjetilstand | papegøje) deaktiver",
+        "afbryde (papegøjetilstand | papegøje)",
+        "annuller (papegøjetilstand | papegøje)",
+        "deaktiver (papegøjetilstand | papegøje)",
+        "frakoble (papegøjetilstand | papegøje)",
+        "stop (papegøjetilstand | papegøje)",
+        "stop med at gentage mig"
+    ],
+    "repeat.stt.intent": [
+        "Fortæl mig hvad jeg (lige|) sagde",
+        "Hvad har jeg (bare|) (sagt|fortalt dig)",
+        "Hvad hørte du mig sige",
+        "Hvad troede du jeg sagde"
+    ]
 }
