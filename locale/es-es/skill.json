@@ -1,0 +1,24 @@
+{
+  "skill_id": "skill-ovos-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/skill-ovos-parrot",
+  "name": "Loro",
+  "description": "¡Convierte OpenVoiceOS en un loro! Haz que OVOS repita lo que quieras.",
+  "examples": [
+    "Di buenas noches, Ana",
+    "repite: Una vez, en una lúgubre medianoche, mientras reflexionaba, débil y cansado, sobre muchos volúmenes antiguos y curiosos de saberes olvidados",
+    "Habla, ¡Puedo decir lo que quieras!",
+    "Repite lo que acabas de decir",
+    "Repítelo",
+    "¿Puedes repetirlo?",
+    "¿Qué acabo de decir?",
+    "Dime lo que acabo de decir.",
+    "(Inicia|Empieza) el loro",
+    "Para el loro"
+  ],
+  "tags": [
+    "loro",
+    "eco",
+    "repetidor",
+    "entretenimiento"
+  ]
+}

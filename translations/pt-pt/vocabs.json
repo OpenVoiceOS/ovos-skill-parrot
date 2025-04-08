@@ -1,0 +1,18 @@
+{
+  "StopKeyword.voc": [
+    "pára",
+    "[UNUSED]",
+    "[UNUSED]",
+    "[UNUSED]",
+    "[UNUSED]",
+    "(cancela|cancelar)",
+    "desativar"
+  ],
+  "ParrotKeyword.voc": [
+    "papagaio",
+    "[UNUSED]",
+    "(repetir|repitas) o que eu (digo|disser)",
+    "repetir tudo",
+    "(me repetir|repetir-me)"
+  ]
+}
