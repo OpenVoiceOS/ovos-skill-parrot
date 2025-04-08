@@ -1,0 +1,50 @@
+{
+  "did.hear.dialog": [
+    "Claro.",
+    "Sí."
+  ],
+  "did.not.hear.dialog": [
+    "No, creo que no te he oído.",
+    "No, no te he oído."
+  ],
+  "repeat.stt.old.dialog": [
+    "Lo último que has dicho ha sido: {stt}.",
+    "Hace un rato has dicho: {stt}."
+  ],
+  "nothing.dialog": [
+    "nada"
+  ],
+  "repeat.tts.dialog": [
+    "Acabo de decir: {tts}",
+    "He dicho: {tts}"
+  ],
+  "please.repeat.dialog": [
+    "¿Puedes repetirlo?",
+    "¿Qué has dicho?"
+  ],
+  "parrot_stop.dialog": [
+    "El modo loro está desactivado",
+    "Modo loro desactivado",
+    "El modo loro está apagado",
+    "El modo loro se ha apagado",
+    "(Dejaré|Pararé) de repetir lo que dices."
+  ],
+  "repeat.stt.dialog": [
+    "Acabas de decir: {stt}.",
+    "Has dicho: {stt}."
+  ],
+  "parrot_start.dialog": [
+    "El modo loro está activado",
+    "Modo loro activado",
+    "El modo loro está encendido",
+    "Modo loro encendido",
+    "Está bien ser un loro",
+    "Me gusta ser un loro",
+    "Repetiré lo que digas",
+    "Se me da bien repetir cosas",
+    "Soy un loro"
+  ],
+  "not_parroting.dialog": [
+    "No estoy en modo loro"
+  ]
+}
