@@ -1,0 +1,18 @@
+{
+  "StopKeyword.voc": [
+    "para",
+    "desactiva\n",
+    "apaga",
+    "avorta",
+    "desconectado\nfuera de línea",
+    "cancela",
+    "deshabilita"
+  ],
+  "ParrotKeyword.voc": [
+    "loro",
+    "repetir como un loro\nrepite como un loro\nhablar como un loro\nhabla como un loro",
+    "repite lo que digo",
+    "repítelo todo",
+    "repíteme"
+  ]
+}
