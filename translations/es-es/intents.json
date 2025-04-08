@@ -1,0 +1,48 @@
+{
+  "repeat.tts.intent": [
+    "(¿Qué acabas de decirme?|¿Qué me acabas de decir?)",
+    "Repite lo que (acabas de decir|has dicho) (ahora|)",
+    "¿Puedes repetirlo?",
+    "Repítelo.",
+    "(¿Puedes decir|di) (esto|) (una vez más|otra vez)?",
+    "Dilo (una vez más|otra vez).",
+    "¿Qué ha sido eso?",
+    "¿Cómo?"
+  ],
+  "start_parrot.intent": [
+    "empieza a hablar como un loro",
+    "activa el modo loro",
+    "modo loro (activado|iniciado|encendido)",
+    "inicio del modo loro",
+    "inicia el modo loro",
+    "inicia el loro",
+    "repítelo todo",
+    "repite todo lo que (oigas|escuches)"
+  ],
+  "stop_parrot.intent": [
+    "para (el modo loro|de repetir)",
+    "desactiva el modo loro",
+    "[UNUSED]",
+    "cancela el modo loro",
+    "deshabilita el modo loro",
+    "(modo loro|loro) para",
+    "(modo loro|loro) desactiva ",
+    "[UNUSED]",
+    "(modo loro|loro) cancela",
+    "(modo loro|loro) deshabilita",
+    "(para|deja) de repetirme"
+  ],
+  "repeat.stt.intent": [
+    "¿Qué te acabo de decir ( ahora|)?",
+    "¿Qué crees que he dicho?",
+    "¿Qué has oído que decía?",
+    "Dime lo que (acabo de decir|he dicho)."
+  ],
+  "speak.intent": [
+    "(di|repite|habla|di después de mí) {sentence}",
+    "(di|repite|habla|di) {sentence} después de mí"
+  ],
+  "did.you.hear.me.intent": [
+    "(¿Puedes oírme|¿Pudiste oírme|¿Me oyes|¿Oíste eso|¿Oíste esto|¿Has oído esto|¿Has oído eso|Me has oído)?\n"
+  ]
+}
