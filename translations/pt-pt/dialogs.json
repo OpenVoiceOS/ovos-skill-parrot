@@ -1,0 +1,50 @@
+{
+  "did.hear.dialog": [
+    "[UNUSED]",
+    "sim"
+  ],
+  "did.not.hear.dialog": [
+    "Não, acho que não te ouvi",
+    "Não, eu não te ouvi"
+  ],
+  "repeat.stt.old.dialog": [
+    "A última coisa que disseste foi {stt}.",
+    "Há um tempo atrás disseste, {stt}."
+  ],
+  "nothing.dialog": [
+    "nada"
+  ],
+  "repeat.tts.dialog": [
+    "Eu acabei de dizer, {tts}",
+    "Eu disse, {tts}"
+  ],
+  "please.repeat.dialog": [
+    "(podes|pode) repetir (isso|)",
+    "O que disseste?"
+  ],
+  "parrot_stop.dialog": [
+    "Modo papagaio desativado",
+    "[UNUSED]",
+    "Modo papagaio desligado",
+    "[UNUSED]",
+    "Vou parar de repetir o que dizes"
+  ],
+  "repeat.stt.dialog": [
+    "Acabaste de dizer, {stt}.",
+    "Tu disseste, {stt}."
+  ],
+  "parrot_start.dialog": [
+    "Modo papagaio ligado",
+    "[UNUSED]",
+    "Modo papagaio ativo",
+    "Modo papagaio ativado",
+    "É bom ser um papagaio",
+    "Eu gosto de ser um papagaio",
+    "Eu vou repetir tudo que disseres",
+    "Eu sou bom a repetir coisas",
+    "Eu sou um papagaio"
+  ],
+  "not_parroting.dialog": [
+    "Eu não estou no modo papagaio"
+  ]
+}
