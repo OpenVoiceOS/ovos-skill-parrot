@@ -5,7 +5,7 @@ from os import walk, path
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 
 
-URL = "https://github.com/OpenVoiceOS/skill-ovos-parrot"
+URL = "https://github.com/OpenVoiceOS/ovos-skill-parrot"
 SKILL_CLAZZ = "ParrotSkill"  # needs to match __init__.py class name
 PYPI_NAME = "ovos-skill-parrot"  # pip install PYPI_NAME
 
