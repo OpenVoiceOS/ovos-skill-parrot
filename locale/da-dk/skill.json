@@ -1,6 +1,6 @@
 {
-  "skill_id": "skill-ovos-parrot.openvoiceos",
-  "source": "https://github.com/OpenVoiceOS/skill-ovos-parrot",
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
   "name": "Papegøje",
   "description": "Gør OpenVoiceOS til en ekko papegøje! Få OVOS til at gentage, hvad du vil.",
   "examples": [

@@ -1,6 +1,6 @@
 {
-  "skill_id": "skill-ovos-parrot.openvoiceos",
-  "source": "https://github.com/OpenVoiceOS/skill-ovos-parrot",
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
   "name": "Parrot",
   "description": "Turn OpenVoiceOS into a echoing parrot! Make OVOS repeat whatever you want.",
   "examples": [

@@ -10,7 +10,7 @@ from ovos_skill_parrot import ParrotSkill
 class TestSkillLoading(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        self.skill_id = "skill-ovos-parrot.openvoiceos"
+        self.skill_id = "ovos-skill-parrot.openvoiceos"
         self.path = dirname(dirname(__file__))
 
     def test_from_class(self):
