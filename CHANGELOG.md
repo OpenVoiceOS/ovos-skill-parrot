@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.19a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.19a1) (2025-04-08)
+## [0.1.20a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.20a1) (2025-05-15)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.18...0.1.19a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.19...0.1.20a1)
 
 **Merged pull requests:**
 
-- es-es/translate [\#54](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/54) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- fix: standardize urls / skill-id / pypi-name [\#56](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/56) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
