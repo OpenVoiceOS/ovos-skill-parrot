@@ -1,2 +1,7 @@
-(di|repite|habla|di después de mí) {sentence}
-(di|repite|habla|di) {sentence} después de mí
+di después de mí {sentence}
+di {sentence}
+di {sentence} después de mí
+habla {sentence}
+habla {sentence} después de mí
+repite {sentence}
+repite {sentence} después de mí

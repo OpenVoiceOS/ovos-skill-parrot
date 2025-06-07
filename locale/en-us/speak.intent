@@ -1,2 +1,7 @@
-(say|repeat|speak) {sentence} after me
-(say|repeat|speak|say after me) {sentence}
+repeat {sentence}
+repeat {sentence} after me
+say after me {sentence}
+say {sentence}
+say {sentence} after me
+speak {sentence}
+speak {sentence} after me

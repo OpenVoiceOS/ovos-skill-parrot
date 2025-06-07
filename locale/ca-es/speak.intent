@@ -1,2 +1,12 @@
-(digues|repeteix|repetix) (després de mi|) {sentence}
-(digues|repeteix|repetix) {sentence} (després de mi|)
+digues després de mi {sentence}
+digues {sentence}
+digues {sentence}
+digues {sentence} després de mi
+repeteix després de mi {sentence}
+repeteix {sentence}
+repeteix {sentence}
+repeteix {sentence} després de mi
+repetix després de mi {sentence}
+repetix {sentence}
+repetix {sentence}
+repetix {sentence} després de mi
