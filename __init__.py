@@ -1,13 +1,13 @@
 from time import monotonic
-
+from ovos_bus_client.message import Message
 from ovos_bus_client.session import SessionManager, Session
 from ovos_utils import classproperty
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_workshop.decorators import intent_handler
-from ovos_workshop.skills import OVOSSkill
+from ovos_workshop.skills.converse import ConversationalSkill
 
 
-class ParrotSkill(OVOSSkill):
+class ParrotSkill(ConversationalSkill):
 
     @classproperty
     def runtime_requirements(self):
@@ -126,6 +126,23 @@ class ParrotSkill(OVOSSkill):
             self.stop_session(sess)
         else:
             self.speak_dialog("not_parroting")
+
+    def can_answer(self, message: Message) -> bool:
+        """
+        Determines if the skill can handle the given utterances in the specified language in the converse method.
+
+        Override this method to implement custom logic for assessing whether the skill is capable of answering a query.
+
+        Args:
+            utterances: List of possible transcriptions to evaluate.
+            lang: BCP-47 language code for the utterances.
+
+        Returns:
+            True if the skill can handle the query during converse; otherwise, False.
+        """
+        sess = SessionManager.get(message)
+        return sess.session_id in self.parrot_sessions and \
+                self.parrot_sessions[sess.session_id]["parrot"]
 
     def converse(self, message):
         utterances = message.data["utterances"]
