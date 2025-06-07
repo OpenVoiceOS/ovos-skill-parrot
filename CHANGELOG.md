@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.22a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.22a1) (2025-06-07)
+## [0.1.23a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.23a1) (2025-06-07)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.21...0.1.22a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.22...0.1.23a1)
 
 **Merged pull requests:**
 
-- Autos [\#60](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/60) ([JarbasAl](https://github.com/JarbasAl))
+- fix: workshop 6.0.0 compat [\#62](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/62) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
