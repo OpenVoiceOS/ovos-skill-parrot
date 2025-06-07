@@ -161,8 +161,13 @@ class ParrotSkill(ConversationalSkill):
         return self.can_answer(message)  # same logic
 
     def stop_session(self, session: Session):
-        self.parrot_sessions[session.session_id]["parrot"] = False
-        self.speak_dialog("parrot_stop")
-        if session.session_id == "default":
-            self.gui["running"] = False
-            self.gui.release()
+        if sess.session_id in self.parrot_sessions and \
+                self.parrot_sessions[sess.session_id]["parrot"]:
+
+            self.parrot_sessions[session.session_id]["parrot"] = False
+            self.speak_dialog("parrot_stop")
+            if session.session_id == "default":
+                self.gui["running"] = False
+                self.gui.release()
+            return True
+        return False
