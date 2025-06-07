@@ -127,7 +127,7 @@ class ParrotSkill(ConversationalSkill):
         else:
             self.speak_dialog("not_parroting")
 
-    def can_answer(self, message: Message) -> bool:
+    def can_converse(self, message: Message) -> bool:
         """
         Determines if the skill can handle the given utterances in the specified language in the converse method.
 
@@ -161,9 +161,8 @@ class ParrotSkill(ConversationalSkill):
         return self.can_answer(message)  # same logic
 
     def stop_session(self, session: Session):
-        if sess.session_id in self.parrot_sessions and \
-                self.parrot_sessions[sess.session_id]["parrot"]:
-
+        if session.session_id in self.parrot_sessions and \
+                self.parrot_sessions[session.session_id]["parrot"]:
             self.parrot_sessions[session.session_id]["parrot"] = False
             self.speak_dialog("parrot_stop")
             if session.session_id == "default":
