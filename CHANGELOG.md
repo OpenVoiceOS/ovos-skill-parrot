@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.20a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.20a1) (2025-05-15)
+## [0.1.21a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.21a1) (2025-06-07)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.19...0.1.20a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.20...0.1.21a1)
 
 **Merged pull requests:**
 
-- fix: standardize urls / skill-id / pypi-name [\#56](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/56) ([JarbasAl](https://github.com/JarbasAl))
+- fix: support latest ovos-workshop [\#58](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/58) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
