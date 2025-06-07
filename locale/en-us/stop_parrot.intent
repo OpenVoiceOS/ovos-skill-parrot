@@ -1,11 +1,21 @@
-(parrot mode | parroting ) abort
-(parrot mode | parroting ) cancel
-(parrot mode | parroting ) disable
-(parrot mode | parroting ) disengage
-(parrot mode | parroting ) stop
-abort (parrot mode | parroting )
-cancel (parrot mode | parroting )
-disable (parrot mode | parroting )
-disengage (parrot mode | parroting )
-stop (parrot mode | parroting )
+abort parrot mode
+abort parroting
+cancel parrot mode
+cancel parroting
+disable parrot mode
+disable parroting
+disengage parrot mode
+disengage parroting
+parrot mode abort
+parrot mode cancel
+parrot mode disable
+parrot mode disengage
+parrot mode stop
+parroting abort
+parroting cancel
+parroting disable
+parroting disengage
+parroting stop
+stop parrot mode
+stop parroting
 stop repeating me

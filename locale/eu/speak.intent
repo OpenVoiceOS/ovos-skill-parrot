@@ -1,2 +1,5 @@
-(esan|errepikatu) {sentence} nire ondoren
-(esan|errepikatu|esan nire ondoren) {sentence}
+errepikatu {sentence}
+errepikatu {sentence} nire ondoren
+esan nire ondoren {sentence}
+esan {sentence}
+esan {sentence} nire ondoren

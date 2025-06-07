@@ -1,2 +1,7 @@
-(sig|gentag|tal) {sætning} efter mig
-(sig|gentag|tal|sig efter mig) {sætning}
+gentag {sætning}
+gentag {sætning} efter mig
+sig efter mig {sætning}
+sig {sætning}
+sig {sætning} efter mig
+tal {sætning}
+tal {sætning} efter mig
