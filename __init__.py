@@ -133,10 +133,6 @@ class ParrotSkill(ConversationalSkill):
 
         Override this method to implement custom logic for assessing whether the skill is capable of answering a query.
 
-        Args:
-            utterances: List of possible transcriptions to evaluate.
-            lang: BCP-47 language code for the utterances.
-
         Returns:
             True if the skill can handle the query during converse; otherwise, False.
         """
@@ -146,18 +142,12 @@ class ParrotSkill(ConversationalSkill):
 
     def converse(self, message):
         utterances = message.data["utterances"]
-        sess = SessionManager.get(message)
-        if sess.session_id in self.parrot_sessions and \
-                self.parrot_sessions[sess.session_id]["parrot"]:
-
-            # check if stop intent
-            if self.voc_match(utterances[0], "StopKeyword") and \
-                    self.voc_match(utterances[0], "ParrotKeyword"):
-                self.handle_stop_parrot_intent(message)
-            else:  # else parrot utterance back
-                self.speak(utterances[0])
-            return True
-        return False
+        # check if stop intent
+        if self.voc_match(utterances[0], "StopKeyword") and \
+                self.voc_match(utterances[0], "ParrotKeyword"):
+            self.handle_stop_parrot_intent(message)
+        else:  # else parrot utterance back
+            self.speak(utterances[0])
 
     def handle_deactivate(self, message):
         """
@@ -167,21 +157,17 @@ class ParrotSkill(ConversationalSkill):
         sess = SessionManager.get(message)
         self.stop_session(sess)
 
+    def can_stop(self, message: Message) -> bool:
+        return self.can_answer(message)  # same logic
+
     def stop_session(self, session: Session):
-        if session.session_id in self.parrot_sessions and \
-                self.parrot_sessions[session.session_id]["parrot"]:
+        if sess.session_id in self.parrot_sessions and \
+                self.parrot_sessions[sess.session_id]["parrot"]:
+
             self.parrot_sessions[session.session_id]["parrot"] = False
             self.speak_dialog("parrot_stop")
             if session.session_id == "default":
                 self.gui["running"] = False
                 self.gui.release()
-            return True
-        return False
-
-    def stop(self):
-        sess = SessionManager.get()
-        if sess.session_id in self.parrot_sessions and \
-                self.parrot_sessions[sess.session_id]["parrot"]:
-            self.stop_session(sess)
             return True
         return False
