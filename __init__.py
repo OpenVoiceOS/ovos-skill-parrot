@@ -115,7 +115,7 @@ class ParrotSkill(ConversationalSkill):
         self.speak_dialog("parrot_start")
         if sess.session_id == "default":
             self.gui["running"] = True
-            self.gui.show_page("parrot.qml", override_idle=True)
+            self.gui.show_page("parrot", override_idle=True)
             # TODO - enable hybrid listening mode while parrot is on
 
     @intent_handler("stop_parrot.intent")
@@ -158,7 +158,7 @@ class ParrotSkill(ConversationalSkill):
         self.stop_session(sess)
 
     def can_stop(self, message: Message) -> bool:
-        return self.can_answer(message)  # same logic
+        return self.can_converse(message)  # same logic
 
     def stop_session(self, session: Session):
         if session.session_id in self.parrot_sessions and \
