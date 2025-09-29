@@ -1,0 +1,48 @@
+{
+  "repeat.tts.intent": [
+    "O que você acabou de me (dizer|contar)?",
+    "Repita o que você acabou de dizer.",
+    "Você pode repetí-lo?",
+    "Repita isso.",
+    "Você pode dizer (isso) de novo?",
+    "Diga isso (mais uma vez).",
+    "O que foi?",
+    "Voltar?"
+  ],
+  "start_parrot.intent": [
+    "comece a papagaiar",
+    "ativar o modo papagaio",
+    "modo papagaio ativado",
+    "início do modo papagaio",
+    "iniciar modo papagaio",
+    "comece o papagaio",
+    "repita tudo",
+    "repita tudo o que você ouve"
+  ],
+  "stop_parrot.intent": [
+    "parar [modo] papagaio",
+    "desabilitar [modo] papagaio",
+    "abortar [modo] papagaio",
+    "cancelar [modo] papagaio",
+    "desabilitar [modo] papagaio",
+    "parar [modo] papagaio",
+    "desabilitar [modo] papagaio",
+    "abortar [modo] papagaio",
+    "cancelar [modo] papagaio",
+    "desligar [modo] papagaio",
+    "pare de me (imitar|arremedar)"
+  ],
+  "repeat.stt.intent": [
+    "O que eu acabei de te (dizercontar)?",
+    "O que você acha que eu disse?",
+    "O que você me ouviu dizer?",
+    "Diga-me o que eu (acabei de dizer|disse)."
+  ],
+  "speak.intent": [
+    "(diga|repita|fale|diga depois de mim): {sentence}",
+    "(diga|repita|fale): {sentence}"
+  ],
+  "did.you.hear.me.intent": [
+    "Você pode ouvir (isso|isto)?"
+  ]
+}
