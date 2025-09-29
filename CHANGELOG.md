@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.25a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.25a1) (2025-06-10)
+## [0.1.26a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.26a1) (2025-09-29)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.24...0.1.25a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.25...0.1.26a1)
 
 **Merged pull requests:**
 
-- fix: stop [\#66](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/66) ([JarbasAl](https://github.com/JarbasAl))
+- Add pt-BR [\#68](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/68) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 
 
