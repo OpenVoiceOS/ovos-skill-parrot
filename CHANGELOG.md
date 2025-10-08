@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.26a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.26a2) (2025-10-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.26a1...0.1.26a2)
+
+**Merged pull requests:**
+
+- translation of parrot [\#72](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/72) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- translation of parrot [\#71](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/71) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- translation of parrot [\#70](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/70) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
 ## [0.1.26a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.26a1) (2025-09-29)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.25...0.1.26a1)
