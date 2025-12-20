@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.26a3](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.26a3) (2025-12-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.26a2...0.1.26a3)
+
+**Merged pull requests:**
+
+- chore: Configure Renovate [\#73](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/73) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.1.26a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.26a2) (2025-10-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.26a1...0.1.26a2)
