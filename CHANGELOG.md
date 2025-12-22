@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.26a4](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.26a4) (2025-12-22)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.26a3...0.1.26a4)
+
+**Merged pull requests:**
+
+- chore\(deps\): update dependency ovos-workshop to v8 [\#81](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/81) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.1.26a3](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.26a3) (2025-12-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.26a2...0.1.26a3)
