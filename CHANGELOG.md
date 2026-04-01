@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.27a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.27a2) (2026-04-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.27a1...0.1.27a2)
+
+**Merged pull requests:**
+
+- translate\(fa-IR\): update speak.intent [\#93](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/93) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(fa-IR\): update repeat.stt.intent [\#92](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/92) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(fa-IR\): update nothing.dialog [\#91](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/91) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(fa-IR\): update did.you.hear.me.intent [\#89](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/89) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [0.1.27a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.27a1) (2026-03-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.26a4...0.1.27a1)
