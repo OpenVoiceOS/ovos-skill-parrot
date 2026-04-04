@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.27a5](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.27a5) (2026-04-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.27a4...0.1.27a5)
+
+**Merged pull requests:**
+
+- ci: modernize GitHub workflows [\#99](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/99) ([JarbasAl](https://github.com/JarbasAl))
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#98](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/98) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.1.27a4](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.27a4) (2026-04-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.27a3...0.1.27a4)
+
 ## [0.1.27a3](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.27a3) (2026-04-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.27a2...0.1.27a3)
