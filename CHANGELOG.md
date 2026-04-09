@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.27a6](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.27a6) (2026-04-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.27a5...0.1.27a6)
+
+**Merged pull requests:**
+
+- chore\(ovos-skill-parrot\): allow ovos-workshop\<9.0.0 [\#101](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/101) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.27a5](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.27a5) (2026-04-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.27a4...0.1.27a5)
