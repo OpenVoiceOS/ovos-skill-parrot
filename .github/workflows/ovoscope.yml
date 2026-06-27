@@ -13,3 +13,11 @@ jobs:
       python_version: '3.11'
       install_extras: 'test'
       test_path: 'test/end2end/'
+      require_padatious: true
+      # Pin the integrated spec stack AFTER `.[test]` so the resolver cannot
+      # downgrade ovos-workshop below the 9.x INTENT-4 producer (the published
+      # ovos-core[plugins] pulls fixture skills that cap it lower). Mirrors the
+      # proven pin-set from OpenVoiceOS/ovos-test-harness@dev requirements.txt;
+      # runs with --force-reinstall --no-deps, and this skill's own source still
+      # wins via the workflow's final local reinstall. Flip refs to @dev as they land.
+      post_install_pip: "git+https://github.com/OpenVoiceOS/ovos-core@test/spec-stack-integration-proof git+https://github.com/OpenVoiceOS/ovos-workshop@feat/intent-4-producer git+https://github.com/OpenVoiceOS/ovos-bus-client@feat/session-spec-fields git+https://github.com/OpenVoiceOS/ovos-adapt-pipeline-plugin@fix/allow-ovos-workshop-9 git+https://github.com/OpenVoiceOS/ovos-padatious-pipeline-plugin@fix/allow-ovos-workshop-9 git+https://github.com/OpenVoiceOS/padacioso@fix/bus-client-2x-unhashable-session git+https://github.com/OpenVoiceOS/ovoscope@dev git+https://github.com/OpenVoiceOS/ovos-skill-fallback-unknown@fix/allow-ovos-workshop-10 git+https://github.com/OpenVoiceOS/ovos-skill-count@fix/allow-ovos-workshop-10 git+https://github.com/OpenVoiceOS/ovos-skill-hello-world@dev"
