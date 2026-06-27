@@ -13,3 +13,4 @@ jobs:
       python_version: '3.11'
       install_extras: 'test'
       test_path: 'test/end2end/'
+      require_padatious: true
