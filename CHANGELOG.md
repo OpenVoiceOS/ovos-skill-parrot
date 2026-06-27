@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.29a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.29a1) (2026-06-27)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.28a1...0.1.29a1)
+
+**Merged pull requests:**
+
+- fix\(ci\): add ovoscope e2e test + split test/end2end extras [\#106](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/106) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.28a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.28a1) (2026-06-27)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.27a6...0.1.28a1)
