@@ -1,0 +1,3 @@
+ovoscope>=1.0.0a1,<2.0.0
+ovos-bus-client
+ovos-core[plugins,lgpl]>=2.0.0a1

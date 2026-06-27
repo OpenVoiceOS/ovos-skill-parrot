@@ -11,5 +11,6 @@ jobs:
     secrets: inherit
     with:
       python_version: '3.11'
-      install_extras: 'test'
+      install_extras: 'end2end'
       test_path: 'test/end2end/'
+      require_padatious: true
