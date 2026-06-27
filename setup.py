@@ -83,6 +83,15 @@ setup(
     packages=[SKILL_PKG],
     include_package_data=True,
     install_requires=required("requirements.txt"),
+    extras_require={
+        # lightweight extra for unit tests (build_tests / coverage) — must NOT
+        # pull the heavy e2e stack so those jobs stay green without system deps
+        "test": required("test/requirements.txt"),
+        # heavy extra for ovoscope end-to-end tests (ovos-core[plugins,lgpl]
+        # drags in fann2 which needs swig + libfann system headers; the
+        # ovoscope job apt-installs them via require_padatious: true)
+        "end2end": required("test/requirements-end2end.txt"),
+    },
     keywords='ovos skill plugin',
     entry_points={'ovos.plugin.skill': PLUGIN_ENTRY_POINT}
 )
