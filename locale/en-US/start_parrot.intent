@@ -1,8 +1,4 @@
-engage parrot mode
-parrot mode on
-parrot mode start
-repeat everything
-repeat everything you hear
-start parrot
-start parrot mode
+(engage|start|begin|activate|enable) parrot [mode]
+parrot mode (on|start)
 start parroting
+repeat everything [you hear]
