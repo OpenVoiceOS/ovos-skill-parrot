@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.30a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.30a2) (2026-07-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.30a1...0.1.30a2)
+
+**Merged pull requests:**
+
+- chore: add ovoscope end2end intent-routing tests [\#103](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/103) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.30a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.30a1) (2026-07-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.29a1...0.1.30a1)
