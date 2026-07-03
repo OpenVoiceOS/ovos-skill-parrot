@@ -18,7 +18,23 @@ class TestParrotSkill(TestCase):
         # under the ovos.* namespace ("ovos.utterance.speak") instead of
         # "speak". Ignore both so the test asserts only the deterministic
         # message-flow skeleton and is robust to slot extraction + namespace.
-        self.ignore_messages = ["speak", "ovos.utterance.speak"]
+        # The dispatcher additionally mirrors the intent lifecycle under the
+        # OVOS-INTENT namespace ("ovos.intent.matched" / "ovos.intent.handler.*"
+        # alongside the legacy "mycroft.skill.handler.*"); ignore those mirrors
+        # so the skeleton stays a single canonical sequence.
+        # a full-emit MockTTS also surfaces the audio-output span
+        # ("recognizer_loop:audio_output_start"/"...end") around the echoed
+        # speak; ignore those too so the skeleton is stable across ovoscope
+        # versions.
+        self.ignore_messages = [
+            "speak",
+            "ovos.utterance.speak",
+            "ovos.intent.matched",
+            "ovos.intent.handler.start",
+            "ovos.intent.handler.complete",
+            "recognizer_loop:audio_output_start",
+            "recognizer_loop:audio_output_end",
+        ]
 
     def tearDown(self):
         if self.minicroft:
