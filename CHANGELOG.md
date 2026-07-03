@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.30a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.30a1) (2026-07-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.29a1...0.1.30a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): conform intent resources to OVOS-INTENT-2 §2 naming [\#109](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/109) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.29a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.29a1) (2026-06-27)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.28a1...0.1.29a1)
