@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.31a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.31a2) (2026-07-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.31a1...0.1.31a2)
+
+**Merged pull requests:**
+
+- translate\(kab-DZ\): update stop\_keyword.voc [\#114](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/114) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [0.1.31a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.31a1) (2026-07-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.30a2...0.1.31a1)
