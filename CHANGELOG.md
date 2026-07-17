@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.31a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.31a1) (2026-07-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.30a2...0.1.31a1)
+
+**Merged pull requests:**
+
+- fix: rename entry-point group to opm.skill [\#112](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/112) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.30a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.30a2) (2026-07-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.30a1...0.1.30a2)
