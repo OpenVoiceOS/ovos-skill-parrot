@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.31a3](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.31a3) (2026-08-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.31a2...0.1.31a3)
+
+**Merged pull requests:**
+
+- docs: rewrite README in Simplified Technical English [\#117](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/117) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.31a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.31a2) (2026-07-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.31a1...0.1.31a2)
