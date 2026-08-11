@@ -60,7 +60,9 @@ class TestParrotSkill(TestCase):
         expected_messages = [
             message,
             Message(f"{self.skill_id}.activate", {}),  # skill is activated
-            Message(f"{self.skill_id}:speak.intent", {}),  # intent triggers
+            # OVOS-INTENT-2/PIPELINE-1: the per-skill dispatch topic drops the
+            # ".intent" suffix present in the intent file/label.
+            Message(f"{self.skill_id}:speak", {}),  # intent triggers
             Message("mycroft.skill.handler.start",
                     {"name": "ParrotSkill.handle_speak"}),
             # here the skill emits the echoed sentence via speak(...), ignored

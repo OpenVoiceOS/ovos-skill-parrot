@@ -51,29 +51,33 @@ class TestParrotLifecycleIntentsEnUS(unittest.TestCase):
         capture.capture(utterance, timeout=30)
         return [m.msg_type for m in capture.finish()]
 
+    # OVOS-INTENT-2/PIPELINE-1: the per-skill dispatch topic no longer carries
+    # the ".intent" suffix present in the intent file/label (same migration
+    # already applied in ovos-skill-camera#63 / ovos-skill-ddg#137).
+
     def test_start_parrot(self):
         types = self._run("start parrot", "start-1")
-        self.assertIn(f"{SKILL_ID}:start_parrot.intent", types)
+        self.assertIn(f"{SKILL_ID}:start_parrot", types)
 
     def test_engage_parrot_mode(self):
         types = self._run("engage parrot mode", "start-2")
-        self.assertIn(f"{SKILL_ID}:start_parrot.intent", types)
+        self.assertIn(f"{SKILL_ID}:start_parrot", types)
 
     def test_repeat_everything(self):
         types = self._run("repeat everything", "start-3")
-        self.assertIn(f"{SKILL_ID}:start_parrot.intent", types)
+        self.assertIn(f"{SKILL_ID}:start_parrot", types)
 
     def test_stop_parroting(self):
         types = self._run("stop parroting", "stop-1")
-        self.assertIn(f"{SKILL_ID}:stop_parrot.intent", types)
+        self.assertIn(f"{SKILL_ID}:stop_parrot", types)
 
     def test_stop_parrot_mode(self):
         types = self._run("stop parrot mode", "stop-2")
-        self.assertIn(f"{SKILL_ID}:stop_parrot.intent", types)
+        self.assertIn(f"{SKILL_ID}:stop_parrot", types)
 
     def test_cancel_parroting(self):
         types = self._run("cancel parroting", "stop-3")
-        self.assertIn(f"{SKILL_ID}:stop_parrot.intent", types)
+        self.assertIn(f"{SKILL_ID}:stop_parrot", types)
 
 
 if __name__ == "__main__":
