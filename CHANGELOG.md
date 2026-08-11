@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.31a4](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.31a4) (2026-08-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.31a3...0.1.31a4)
+
+**Merged pull requests:**
+
+- test: golden-utterance e2e coverage [\#119](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/119) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.31a3](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.31a3) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.31a2...0.1.31a3)
