@@ -30,14 +30,23 @@ class ParrotSkill(ConversationalSkill):
         self.add_event('recognizer_loop:utterance', self.on_utterance)
         self.add_event('speak', self.on_speak)
 
+    @staticmethod
+    def _new_session_state():
+        # NOTE: "prev_stt"/"prev_tts" are included here (and default to "")
+        # so intent handlers can always index them once a session exists,
+        # regardless of whether on_utterance/on_speak has fired yet for it.
+        return {"current_stt": "",
+                "prev_stt": "",
+                "prev_tts": "",
+                "parrot": False,
+                "tts_timestamp": -1,
+                "stt_timestamp": -1}
+
     def on_utterance(self, message):
         utt = message.data['utterances'][0]
         sess = SessionManager.get(message)
         if sess.session_id not in self.parrot_sessions:
-            self.parrot_sessions[sess.session_id] = {"current_stt": "",
-                                                     "parrot": False,
-                                                     "tts_timestamp": -1,
-                                                     "stt_timestamp": -1}
+            self.parrot_sessions[sess.session_id] = self._new_session_state()
         self.parrot_sessions[sess.session_id]["prev_stt"] = self.parrot_sessions[sess.session_id]["current_stt"]
         self.parrot_sessions[sess.session_id]["current_stt"] = utt
         self.parrot_sessions[sess.session_id]["stt_timestamp"] = monotonic()
@@ -46,10 +55,7 @@ class ParrotSkill(ConversationalSkill):
         utt = message.data['utterance']
         sess = SessionManager.get(message)
         if sess.session_id not in self.parrot_sessions:
-            self.parrot_sessions[sess.session_id] = {"current_stt": "",
-                                                     "parrot": False,
-                                                     "tts_timestamp": -1,
-                                                     "stt_timestamp": -1}
+            self.parrot_sessions[sess.session_id] = self._new_session_state()
         self.parrot_sessions[sess.session_id]["prev_tts"] = utt
         self.parrot_sessions[sess.session_id]["tts_timestamp"] = monotonic()
 
@@ -106,10 +112,7 @@ class ParrotSkill(ConversationalSkill):
     def handle_start_parrot_intent(self, message):
         sess = SessionManager.get(message)
         if sess.session_id not in self.parrot_sessions:
-            self.parrot_sessions[sess.session_id] = {"current_stt": "",
-                                                     "parrot": False,
-                                                     "tts_timestamp": -1,
-                                                     "stt_timestamp": -1}
+            self.parrot_sessions[sess.session_id] = self._new_session_state()
 
         self.parrot_sessions[sess.session_id]["parrot"] = True
         self.speak_dialog("parrot_start")

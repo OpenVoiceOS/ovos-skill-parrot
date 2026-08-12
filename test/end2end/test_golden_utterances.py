@@ -126,6 +126,60 @@ class TestParrotGoldenUtterances(unittest.TestCase):
             )
             self.fail(f"{len(failures)}/{len(GOLDEN_ROWS)} golden utterances mis-routed:\n{details}")
 
+    def test_repeat_handlers_complete_without_error_on_fresh_session(self):
+        """Regression: repeat_tts/repeat_stt must not raise on a session that
+        has never had a prior ``speak`` (repeat_tts) / never mattered before
+        (repeat_stt) event recorded for it.
+
+        A brand-new session only gets its ``parrot_sessions`` entry from
+        ``on_utterance`` (fired for the very same ``recognizer_loop:utterance``
+        message that triggers the intent match), which never populated
+        ``prev_tts`` (only ``on_speak`` does that). Before the fix,
+        ``handle_repeat_tts`` indexed ``self.parrot_sessions[sid]["prev_tts"]``
+        directly and raised ``KeyError: 'prev_tts'`` after the intent had
+        already correctly matched and dispatched -- observable on the bus as
+        ``mycroft.skill.handler.error`` / ``ovos.intent.handler.error``
+        instead of a normal ``mycroft.skill.handler.complete``.
+        """
+        cases = [
+            ("Can you repeat that?", "repeat_tts"),
+            ("What did I just say?", "repeat_stt"),
+        ]
+        failures = []
+        for i, (text, intent_name) in enumerate(cases):
+            with self.subTest(utterance=text, intent_name=intent_name):
+                messages = self._capture(text, f"repeat-regression-{i}")
+                handler_name = f"ParrotSkill.handle_{intent_name}"
+
+                error_messages = [
+                    m for m in messages
+                    if m.msg_type in ("mycroft.skill.handler.error", "ovos.intent.handler.error")
+                ]
+                complete_messages = [
+                    m for m in messages
+                    if m.msg_type == "mycroft.skill.handler.complete"
+                    and m.data.get("name") == handler_name
+                ]
+                spoke = any(
+                    m.msg_type in ("speak", "ovos.utterance.speak") for m in messages
+                )
+
+                if error_messages:
+                    failures.append(
+                        f"{text!r} ({intent_name}): handler errored: "
+                        f"{[m.data for m in error_messages]}"
+                    )
+                elif not complete_messages:
+                    failures.append(
+                        f"{text!r} ({intent_name}): no {handler_name!r} "
+                        f"mycroft.skill.handler.complete observed"
+                    )
+                elif not spoke:
+                    failures.append(f"{text!r} ({intent_name}): handler never spoke")
+
+        if failures:
+            self.fail("repeat handler regression:\n" + "\n".join(f"  {f}" for f in failures))
+
     def test_negative_confusables_not_claimed(self):
         """Utterances belonging to other skills must not be claimed by parrot."""
         assert len(NEGATIVE_UTTERANCES) >= 5
