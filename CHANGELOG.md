@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.32a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.32a1) (2026-08-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.31a4...0.1.32a1)
+
+**Merged pull requests:**
+
+- fix: repeat\_tts/repeat\_stt raise KeyError after correct dispatch [\#121](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/121) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.31a4](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.31a4) (2026-08-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.31a3...0.1.31a4)
