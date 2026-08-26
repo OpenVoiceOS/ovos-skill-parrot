@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.33a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.33a1) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.32a1...0.1.33a1)
+
+**Merged pull requests:**
+
+- fix: rename bare lang code locale directories [\#123](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/123) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [0.1.32a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.32a1) (2026-08-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.31a4...0.1.32a1)
