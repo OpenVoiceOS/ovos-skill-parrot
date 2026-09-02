@@ -1,3 +1,7 @@
 (abort|cancel|disable|disengage|stop) (parrot mode|parroting)
 (parrot mode|parroting) (abort|cancel|disable|disengage|stop)
 stop repeating me
+quit parroting
+stop copying me
+turn off parrot mode
+parrot off
