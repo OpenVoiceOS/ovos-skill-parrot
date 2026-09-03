@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.34a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.34a1) (2026-09-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.33a1...0.1.34a1)
+
+**Merged pull requests:**
+
+- fix: repeat.intent shadow and missing stop phrasings [\#126](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/126) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.33a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.33a1) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.32a1...0.1.33a1)
