@@ -1,0 +1,24 @@
+{
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
+  "name": "Papagai",
+  "description": "Cambiatz OpenVoiceOS en papagai! Fasètz que OVOS repetisca tot çò que volètz.",
+  "examples": [
+    "digas bona nuèch, Gracia",
+    "repetís Una nuèch tristassa, mentre que soscavi, feble e las, sus fòrça volums curioses de sabers oblidats",
+    "parla, pòdi dire tot çò que volgas!",
+    "repetís çò que venes de dire",
+    "repetís aquò",
+    "o pòdes repetir?",
+    "qué veni de dire?",
+    "digas-me çò que veni de dire.",
+    "comença lo mòde papagai",
+    "arrèsta lo mòde papagai"
+  ],
+  "tags": [
+    "papagai",
+    "resson",
+    "repetidor",
+    "divertiment"
+  ]
+}
