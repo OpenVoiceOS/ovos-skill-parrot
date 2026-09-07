@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.0a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.2.0a1) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.34a1...0.2.0a1)
+
+**Merged pull requests:**
+
+- feat: nl-NL sv-SE locale parity [\#129](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/129) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.1.34a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.34a1) (2026-09-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.33a1...0.1.34a1)
