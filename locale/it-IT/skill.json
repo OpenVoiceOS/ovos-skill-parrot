@@ -1,0 +1,24 @@
+{
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
+  "name": "Pappagallo",
+  "description": "Trasforma OpenVoiceOS in un pappagallo! Fai ripetere a OVOS quello che vuoi.",
+  "examples": [
+    "di Buonanotte, Gracie",
+    "ripeti C'era una volta una notte cupa, mentre meditavo, debole e stanco",
+    "parla Posso dire tutto quello che vuoi!",
+    "Ripeti quello che hai appena detto",
+    "Ripeti quello",
+    "Puoi ripetere?",
+    "Che cosa ho appena detto?",
+    "Dimmi cosa ho appena detto.",
+    "avvia la modalità pappagallo",
+    "ferma la modalità pappagallo"
+  ],
+  "tags": [
+    "pappagallo",
+    "eco",
+    "ripetitore",
+    "intrattenimento"
+  ]
+}

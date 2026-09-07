@@ -2,3 +2,7 @@ diga depois de mim: {sentence}
 diga: {sentence}
 fale: {sentence}
 repita: {sentence}
+repita depois de mim {sentence}
+fale {sentence} depois de mim
+diga {sentence} depois de mim
+repita {sentence} depois de mim
