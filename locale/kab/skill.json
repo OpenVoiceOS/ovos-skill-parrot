@@ -1,0 +1,24 @@
+{
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
+  "name": "Papagay",
+  "description": "Err OpenVoiceOS d papagay! Eǧǧ OVOS ad d-yales ayen i tebɣiḍ.",
+  "examples": [
+    "ini Iḍ ameggaz, Gracie",
+    "ales Yiwen wass deg yiḍ aberkan",
+    "hder Zemreɣ ad d-iniɣ ayen tebɣiḍ!",
+    "Ales ayen i d-tenniḍ",
+    "Ales aya",
+    "Tzemreḍ ad talseḍ?",
+    "D acu i d-nniɣ?",
+    "Ini-yi ayen i d-nniɣ.",
+    "bdu askar n papagay",
+    "ḥbes askar n papagay"
+  ],
+  "tags": [
+    "papagay",
+    "amsuɣu",
+    "amals",
+    "urar"
+  ]
+}
