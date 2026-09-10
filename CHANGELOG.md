@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.4.0a2) (2026-09-10)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.4.0a1...0.4.0a2)
+
+**Merged pull requests:**
+
+- build: migrate to pyproject.toml, consolidate test deps [\#138](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/138) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.4.0a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.4.0a1) (2026-09-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.3.0a1...0.4.0a1)
