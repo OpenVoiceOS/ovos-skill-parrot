@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.4.1a1) (2026-09-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.4.0a2...0.4.1a1)
+
+**Merged pull requests:**
+
+- fix: ship every en-US intent in all locales [\#128](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/128) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.4.0a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.4.0a2) (2026-09-10)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.4.0a1...0.4.0a2)
