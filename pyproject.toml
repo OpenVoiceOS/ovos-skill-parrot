@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-skill-parrot"
+dynamic = ["version"]
+description = "Repeats what the user says"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "JarbasAi", email = "jarbasai@mailfence.com" }
+]
+keywords = ["ovos", "skill", "plugin"]
+requires-python = ">=3.9"
+dependencies = [
+    "ovos-workshop>=8.0.0,<10.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=5.2.4",
+    "pytest-cov>=2.8.1",
+    "ovoscope>=1.0.0a1",
+    "ovos-bus-client",
+    "ovos-core[plugins,lgpl]>=2.0.0a1",
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-skill-parrot"
+
+[project.entry-points."opm.skill"]
+"ovos-skill-parrot.openvoiceos" = "ovos_skill_parrot:ParrotSkill"
+
+[tool.setuptools.dynamic]
+version = { attr = "version.__version__" }
+
+[tool.setuptools]
+packages = ["ovos_skill_parrot"]
+include-package-data = true
+
+[tool.setuptools.package-dir]
+"ovos_skill_parrot" = "."
+
+[tool.setuptools.package-data]
+ovos_skill_parrot = [
+    "*.json",
+    "locale/**/*",
+    "gui/**/*",
+    "res/**/*",
+]
