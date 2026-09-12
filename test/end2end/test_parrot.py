@@ -4,7 +4,7 @@ from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
 from ovos_utils.log import LOG
 
-from ovoscope import End2EndTest, get_minicroft
+from ovoscope import CaptureSession, End2EndTest, get_minicroft
 
 
 class TestParrotSkill(TestCase):
@@ -82,3 +82,40 @@ class TestParrotSkill(TestCase):
         )
 
         test.execute()
+
+    def test_speak_intent_echoes_the_input_phrase(self):
+        """A routing-only check (message flow reaches ``handle_speak``, speak
+        content ignored) is satisfied by a handler that echoes ANY text, or a
+        fixed string, or nothing at all. The parrot's whole job is to say back
+        what it was told, so assert the spoken text equals the phrase that
+        went in -- not merely that some speak happened.
+
+        Two different phrases are driven through the same handler so a
+        wrong implementation that echoes one fixed sentence (which would
+        pass a weaker "did it speak" check for either phrase individually)
+        fails here on whichever phrase does not match that fixed string.
+        """
+        for phrase in ["hello world", "the quick brown fox jumps"]:
+            with self.subTest(phrase=phrase):
+                session = Session(f"echo-{phrase}")
+                session.pipeline = ["ovos-padatious-pipeline-plugin-high"]
+                message = Message(
+                    "recognizer_loop:utterance",
+                    {"utterances": [f"say {phrase}"], "lang": "en-US"},
+                    {"session": session.serialize(), "source": "A", "destination": "B"},
+                )
+                capture = CaptureSession(self.minicroft)
+                capture.capture(message, timeout=15)
+                messages = capture.finish()
+                spoken = [m for m in messages
+                          if m.msg_type in ("speak", "ovos.utterance.speak")]
+                self.assertTrue(
+                    spoken,
+                    f"'say {phrase}' produced no speak message, got "
+                    f"{[m.msg_type for m in messages]}",
+                )
+                self.assertEqual(
+                    spoken[0].data.get("utterance"), phrase,
+                    f"parrot echoed {spoken[0].data.get('utterance')!r} for "
+                    f"input phrase {phrase!r}",
+                )
