@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.5.0a1) (2026-09-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.4.1a2...0.5.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): fill de-DE, es-ES, gl-ES, eu-ES and ca-ES gaps against en-US [\#146](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/146) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.4.1a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.4.1a2) (2026-09-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.4.1a1...0.4.1a2)
