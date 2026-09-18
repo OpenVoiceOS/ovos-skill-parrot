@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.1a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.8.1a1) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.8.0a2...0.8.1a1)
+
+**Merged pull requests:**
+
+- fix\(i18n\): did\_you\_hear\_me.intent coverage, it-IT and pt-BR [\#154](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/154) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.0a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.8.0a2) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.8.0a1...0.8.0a2)
@@ -412,15 +420,10 @@
 **Merged pull requests:**
 
 - Release 0.1.17a1 [\#50](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/50) ([github-actions[bot]](https://github.com/apps/github-actions))
-- pt-pt/translate [\#48](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/48) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.16](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.16) (2025-02-27)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.16a2...0.1.16)
-
-**Merged pull requests:**
-
-- Release 0.1.16a2 [\#47](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/47) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.16a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.16a2) (2025-02-27)
 
