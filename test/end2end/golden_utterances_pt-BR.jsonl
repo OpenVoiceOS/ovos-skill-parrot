@@ -9,6 +9,7 @@
 {"skill_id": "ovos-skill-parrot.openvoiceos", "utterance": "O que você me ouviu dizer?", "lang": "pt-BR", "intent_label": "repeat_stt.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
 {"skill_id": "ovos-skill-parrot.openvoiceos", "utterance": "Você pode ouvir isso?", "lang": "pt-BR", "intent_label": "did_you_hear_me.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
 {"skill_id": "ovos-skill-parrot.openvoiceos", "utterance": "Você pode ouvir isto?", "lang": "pt-BR", "intent_label": "did_you_hear_me.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
+{"skill_id": "ovos-skill-parrot.openvoiceos", "utterance": "Você consegue me ouvir?", "lang": "pt-BR", "intent_label": "did_you_hear_me.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
 {"skill_id": "ovos-skill-parrot.openvoiceos", "utterance": "ativar o modo papagaio", "lang": "pt-BR", "intent_label": "start_parrot.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
 {"skill_id": "ovos-skill-parrot.openvoiceos", "utterance": "início do modo papagaio", "lang": "pt-BR", "intent_label": "start_parrot.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
 {"skill_id": "ovos-skill-parrot.openvoiceos", "utterance": "repita tudo o que você ouve", "lang": "pt-BR", "intent_label": "start_parrot.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": false}
