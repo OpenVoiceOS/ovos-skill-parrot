@@ -1,0 +1,14 @@
+name: Golden Utterances
+
+on:
+  pull_request:
+    branches: [dev]
+  workflow_dispatch:
+
+jobs:
+  golden:
+    uses: OpenVoiceOS/gh-automations/.github/workflows/golden-utterances.yml@feat/golden-utterances-workflow
+    secrets: inherit
+    with:
+      skill_extra: test
+      pipeline: ovos-padatious-pipeline-plugin-high,ovos-padacioso-pipeline-plugin-high,ovos-padacioso-pipeline-plugin-medium,ovos-padacioso-pipeline-plugin-low
