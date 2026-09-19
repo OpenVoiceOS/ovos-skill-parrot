@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.1a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.8.1a2) (2026-09-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.8.1a1...0.8.1a2)
+
+**Merged pull requests:**
+
+- locale: fix forward for \#141's pt-BR review \(SHIP-WITH-FIXES\) [\#142](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/142) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.1a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.8.1a1) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.8.0a2...0.8.1a1)
@@ -409,17 +417,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.17a1...0.1.17a2)
 
-**Merged pull requests:**
-
-- es-es/translate [\#49](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/49) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
 ## [0.1.17a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.17a1) (2025-04-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.16...0.1.17a1)
-
-**Merged pull requests:**
-
-- Release 0.1.17a1 [\#50](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/50) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.16](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.16) (2025-02-27)
 
