@@ -29,9 +29,6 @@ test = [
 [project.urls]
 Homepage = "https://github.com/OpenVoiceOS/ovos-skill-parrot"
 
-[project.entry-points."opm.skill"]
-"ovos-skill-parrot.openvoiceos" = "ovos_skill_parrot:ParrotSkill"
-
 [tool.setuptools.dynamic]
 version = { attr = "version.__version__" }
 
