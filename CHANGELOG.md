@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.2a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.8.2a1) (2026-09-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.8.1a2...0.8.2a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): restore the slot name the fa-IR dialog renamed [\#158](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/158) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.1a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.8.1a2) (2026-09-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.8.1a1...0.8.1a2)
@@ -401,17 +409,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.17...0.1.18a1)
 
-**Merged pull requests:**
-
-- es-es/translate [\#52](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/52) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
 ## [0.1.17](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.17) (2025-04-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.17a2...0.1.17)
-
-**Merged pull requests:**
-
-- Release 0.1.17a2 [\#51](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/51) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.17a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.17a2) (2025-04-08)
 
