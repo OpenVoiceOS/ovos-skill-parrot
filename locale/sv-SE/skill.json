@@ -1,0 +1,24 @@
+{
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
+  "name": "Papegoja",
+  "description": "Gör OpenVoiceOS till en ekande papegoja! Låt OVOS upprepa vad du vill.",
+  "examples": [
+    "säg Godnatt, Gracie",
+    "upprepa Det var en gång vid midnatt dyster, medan jag funderade, svag och trött",
+    "tala Jag kan säga vad du vill!",
+    "Upprepa vad du just sa",
+    "Upprepa det",
+    "Kan du upprepa det?",
+    "Vad sa jag just?",
+    "Berätta vad jag just sa.",
+    "starta papegoja",
+    "stoppa papegoja"
+  ],
+  "tags": [
+    "papegoja",
+    "eko",
+    "upprepare",
+    "underhållning"
+  ]
+}
