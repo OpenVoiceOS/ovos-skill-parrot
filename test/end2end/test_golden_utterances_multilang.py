@@ -19,6 +19,7 @@ torn down when the module's tests finish. Only the pure-Python, swig-free
 padacioso template engine is booted (no padatious training phase, so no
 "mycroft.skills.trained" wait across many locales).
 """
+import hashlib
 import json
 from pathlib import Path
 
@@ -37,6 +38,7 @@ PIPELINE = [
 ]
 
 END2END_DIR = Path(__file__).parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
 LANGS = [
     "ca-ES", "da-DK", "de-DE", "en-US", "es-ES", "eu-ES", "fa-IR", "fr-FR",
@@ -94,12 +96,76 @@ GOLDEN_ROWS = [pytest.param(r, id=_golden_id(r)) for r in ALL_ROWS]
 _CURRENT = {"lang": None, "mc": None}
 
 
+def _resource_digest(root: Path) -> dict:
+    """Map every locale file under ``root`` to a digest of its bytes."""
+    locale = root / "locale"
+    out = {}
+    for path in sorted(locale.rglob("*")):
+        if path.is_file():
+            out[str(path.relative_to(locale))] = hashlib.sha256(
+                path.read_bytes()).hexdigest()
+    return out
+
+
+def _assert_the_loaded_skill_matches_this_checkout(mc):
+    """The rows come from the checkout; the loaded skill must match it.
+
+    This runner reads its golden rows out of the working tree, but the core
+    loads the skill through the venv's ``opm.skill`` entry point. With a
+    non-editable install of an OLDER commit, the rows describe intent lines
+    the loaded skill does not have, and the suite fails exactly the freshly
+    added rows -- two on it-IT against the merge base, where the same tree
+    installed editable passed all 36 (harness, T-3347,
+    knowledge/wiki/audits/harness/parrot-154-fresh-intent-lines.md).
+
+    That reads as "the new lines are wrong" when the lines are right and the
+    environment is stale, which is the most expensive kind of red: it sends
+    a reviewer to the resource files.
+
+    What matters is the CONTENT, not the path. A non-editable install is
+    normal and correct: the shared workflows install the package and run the
+    suite from the checkout, so on a runner the loaded skill legitimately
+    lives in site-packages while the rows come from
+    /home/runner/work/... Comparing paths would fail every CI run of every
+    gold runner in the fleet and prove nothing. Comparing the locale files
+    byte for byte passes an install of this commit and fails a stale one,
+    which is the defect the guard is named for.
+
+    This rides the boot path rather than living in a test of its own. A
+    separate test would have to boot a MiniCroft to have one to look at, and
+    under a filtered run (`-k it-IT`) that is a locale the selected rows do
+    not want, so it would add a stop-and-boot cycle the suite would not
+    otherwise do. The cost is that the message arrives on the first row of
+    each locale rather than on a test named for it.
+    """
+    loaded = Path(mc.plugin_skills[SKILL_ID].instance.root_dir).resolve()
+    if loaded == REPO_ROOT:
+        return
+    here, there = _resource_digest(REPO_ROOT), _resource_digest(loaded)
+    if here == there:
+        return
+    differing = sorted(set(here) ^ set(there)) or sorted(
+        name for name in here if here[name] != there.get(name))
+    raise AssertionError(
+        "the core loaded a copy of this skill whose locale files are not the "
+        "ones this runner reads its rows from, so a row failure below would "
+        "say nothing about the rows:\n"
+        f"  rows and locale files: {REPO_ROOT}\n"
+        f"  loaded skill root_dir: {loaded}\n"
+        f"  locale files that differ ({len(differing)}): "
+        f"{', '.join(differing[:5])}{' ...' if len(differing) > 5 else ''}\n"
+        "Reinstall in this tree: unset VIRTUAL_ENV; "
+        'uv pip install --python .venv/bin/python --prerelease=allow -e ".[test]"'
+    )
+
+
 def _get_minicroft(lang):
     if _CURRENT["lang"] != lang:
         _stop_current()
         _CURRENT["mc"] = get_minicroft([SKILL_ID], max_wait=150, lang=lang,
                                        default_pipeline=PIPELINE)
         _CURRENT["lang"] = lang
+        _assert_the_loaded_skill_matches_this_checkout(_CURRENT["mc"])
     return _CURRENT["mc"]
 
 
