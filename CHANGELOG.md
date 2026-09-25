@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.0a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.9.0a1) (2026-09-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.8.2a2...0.9.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): template lines the gold does not repeat, it-IT and pt-BR [\#161](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/161) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.2a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.8.2a2) (2026-09-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.8.2a1...0.8.2a2)
@@ -377,17 +385,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.20a1...0.1.20)
 
-**Merged pull requests:**
-
-- Release 0.1.20a1 [\#57](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/57) ([github-actions[bot]](https://github.com/apps/github-actions))
-
 ## [0.1.20a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.20a1) (2025-05-15)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.19...0.1.20a1)
-
-**Merged pull requests:**
-
-- fix: standardize urls / skill-id / pypi-name [\#56](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/56) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.19](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.19) (2025-04-08)
 
