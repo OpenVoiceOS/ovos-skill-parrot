@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.2a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.8.2a2) (2026-09-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.8.2a1...0.8.2a2)
+
+**Merged pull requests:**
+
+- test: assert parrot echoes input, not just that it spoke [\#137](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/137) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.8.2a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.8.2a1) (2026-09-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.8.1a2...0.8.2a1)
@@ -385,25 +393,13 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.19a1...0.1.19)
 
-**Merged pull requests:**
-
-- Release 0.1.19a1 [\#55](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/55) ([github-actions[bot]](https://github.com/apps/github-actions))
-
 ## [0.1.19a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.19a1) (2025-04-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.18...0.1.19a1)
 
-**Merged pull requests:**
-
-- es-es/translate [\#54](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/54) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
 ## [0.1.18](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.18) (2025-04-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.18a1...0.1.18)
-
-**Merged pull requests:**
-
-- Release 0.1.18a1 [\#53](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/53) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 ## [0.1.18a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.18a1) (2025-04-08)
 
