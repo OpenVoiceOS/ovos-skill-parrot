@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.0a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.9.0a2) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.9.0a1...0.9.0a2)
+
+**Merged pull requests:**
+
+- test: the gold runner names a stale install instead of blaming the rows [\#163](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/163) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.9.0a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.9.0a1) (2026-09-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.8.2a2...0.9.0a1)
@@ -369,17 +377,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.21a1...0.1.21)
 
-**Merged pull requests:**
-
-- Release 0.1.21a1 [\#59](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/59) ([github-actions[bot]](https://github.com/apps/github-actions))
-
 ## [0.1.21a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.21a1) (2025-06-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.20...0.1.21a1)
-
-**Merged pull requests:**
-
-- fix: support latest ovos-workshop [\#58](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/58) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.20](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.20) (2025-05-15)
 
