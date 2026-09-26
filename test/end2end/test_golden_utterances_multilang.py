@@ -93,7 +93,7 @@ GOLDEN_ROWS = [pytest.param(r, id=_golden_id(r)) for r in ALL_ROWS]
 # skill in pt-PT: test_intents_en_us.py failed 6, test_issue_125.py 2. The
 # rows are ordered by locale, so the previous MiniCroft is stopped the
 # moment the locale changes and the restore chain stays one deep.
-_CURRENT = {"lang": None, "mc": None}
+_CURRENT = {"lang": None, "mc": None, "error": None}
 
 
 def _resource_digest(root: Path) -> dict:
@@ -160,12 +160,28 @@ def _assert_the_loaded_skill_matches_this_checkout(mc):
 
 
 def _get_minicroft(lang):
+    """The MiniCroft for ``lang``, or the guard's failure for every row of it.
+
+    The guard ran after the cache was filled, so once it raised, the next row
+    of the same locale found a cache entry, returned it and never called the
+    guard again: one row per locale reported the stale install and the rest ran
+    against the mismatched copy and reported their own verdicts. The failure is
+    recorded with the entry now, and re-raised for every row of that locale, so
+    a mismatched install cannot be reported once and then run on.
+    """
     if _CURRENT["lang"] != lang:
         _stop_current()
+        # the handle is kept whatever the guard says: an unverified MiniCroft
+        # still has to be stopped, or it holds the process default language.
         _CURRENT["mc"] = get_minicroft([SKILL_ID], max_wait=150, lang=lang,
                                        default_pipeline=PIPELINE)
         _CURRENT["lang"] = lang
-        _assert_the_loaded_skill_matches_this_checkout(_CURRENT["mc"])
+        try:
+            _assert_the_loaded_skill_matches_this_checkout(_CURRENT["mc"])
+        except AssertionError as mismatch:
+            _CURRENT["error"] = mismatch
+    if _CURRENT["error"] is not None:
+        raise _CURRENT["error"]
     return _CURRENT["mc"]
 
 
@@ -174,6 +190,7 @@ def _stop_current():
         _CURRENT["mc"].stop()
     _CURRENT["mc"] = None
     _CURRENT["lang"] = None
+    _CURRENT["error"] = None
 
 
 @pytest.fixture(scope="module", autouse=True)
