@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.0a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.10.0a1) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.9.0a2...0.10.0a1)
+
+**Merged pull requests:**
+
+- feat: locale balance — en-US fr-FR da-DK es-ES de-DE ca-ES gl-ES pt-PT eu-ES it-IT kab pt-BR nl-NL sv-SE oc-FR [\#132](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/132) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.9.0a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.9.0a2) (2026-09-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.9.0a1...0.9.0a2)
@@ -361,17 +369,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.22a1...0.1.22)
 
-**Merged pull requests:**
-
-- Release 0.1.22a1 [\#61](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/61) ([github-actions[bot]](https://github.com/apps/github-actions))
-
 ## [0.1.22a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.22a1) (2025-06-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.21...0.1.22a1)
-
-**Merged pull requests:**
-
-- Autos [\#60](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/60) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.21](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.21) (2025-06-07)
 
