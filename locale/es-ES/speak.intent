@@ -5,3 +5,4 @@ habla {sentence}
 habla {sentence} después de mí
 repite {sentence}
 repite {sentence} después de mí
+repite después de mí {sentence}
