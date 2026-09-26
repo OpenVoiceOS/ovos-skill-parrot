@@ -27,6 +27,7 @@ from pathlib import Path
 
 import pytest
 
+from . import test_golden_utterances_multilang as runner
 from .test_golden_utterances_multilang import (
     REPO_ROOT, SKILL_ID, _assert_the_loaded_skill_matches_this_checkout,
 )
@@ -40,6 +41,17 @@ class _StubInstance:
 class _StubLoader:
     def __init__(self, root_dir):
         self.instance = _StubInstance(root_dir)
+
+
+class _CountingStubMinicroft:
+    """A stub the runner's own cache can hold: it also counts its stop()."""
+
+    def __init__(self, root_dir):
+        self.plugin_skills = {SKILL_ID: _StubLoader(root_dir)}
+        self.stops = 0
+
+    def stop(self):
+        self.stops += 1
 
 
 class _StubMinicroft:
@@ -113,3 +125,93 @@ def test_an_install_with_an_extra_file_is_rejected(tmp_path):
     with pytest.raises(AssertionError) as caught:
         _assert_the_loaded_skill_matches_this_checkout(_StubMinicroft(installed))
     assert "invented.intent" in str(caught.value)
+
+
+@pytest.fixture
+def stubbed_boot(monkeypatch):
+    """Drive the runner's cache without booting anything.
+
+    ``_get_minicroft`` is the code under test here, not the predicate: the
+    defect was the ORDER of the cache write and the guard call, so it can only
+    be pinned through the cache.
+    """
+    booted = []
+
+    def _fake_get_minicroft(skill_ids, **kwargs):
+        mc = _CountingStubMinicroft(_fake_get_minicroft.root_dir)
+        booted.append(mc)
+        return mc
+
+    _fake_get_minicroft.root_dir = REPO_ROOT
+    monkeypatch.setattr(runner, "get_minicroft", _fake_get_minicroft)
+    monkeypatch.setattr(runner, "_CURRENT",
+                        {"lang": None, "mc": None, "error": None})
+    yield _fake_get_minicroft, booted
+
+
+def test_a_matching_install_is_cached_and_booted_once(stubbed_boot):
+    """The normal path: two rows of one locale share one MiniCroft."""
+    fake, booted = stubbed_boot
+    first = runner._get_minicroft("it-IT")
+    second = runner._get_minicroft("it-IT")
+    assert first is second
+    assert len(booted) == 1, "the second row must not boot a second MiniCroft"
+
+
+def test_every_row_of_a_locale_fails_on_a_stale_install(stubbed_boot, tmp_path):
+    """The defect this test exists for.
+
+    The guard used to run after the cache was filled, so the SECOND row of a
+    locale was served the cached MiniCroft and never reached the guard: the
+    stale install was reported once per locale and every later row ran against
+    the mismatched copy. Both rows must fail, with the same message.
+    """
+    fake, booted = stubbed_boot
+    fake.root_dir = _install_copy(tmp_path)
+    (fake.root_dir / "locale" / "it-IT" / "did_you_hear_me.intent").write_text(
+        "mi puoi sentire?\n", encoding="utf-8")
+
+    with pytest.raises(AssertionError) as first:
+        runner._get_minicroft("it-IT")
+    with pytest.raises(AssertionError) as second:
+        runner._get_minicroft("it-IT")
+
+    assert "did_you_hear_me.intent" in str(first.value)
+    assert str(second.value) == str(first.value), \
+        "the second row must fail for the same reason, not run on"
+    assert len(booted) == 1, "the failure must not re-boot per row"
+
+
+def test_the_unverified_minicroft_is_still_stopped(stubbed_boot, tmp_path):
+    """A MiniCroft that failed the guard still holds the process default lang.
+
+    It is kept in the cache for exactly that reason: the locale change (and the
+    module teardown) must be able to stop it.
+    """
+    fake, booted = stubbed_boot
+    fake.root_dir = _install_copy(tmp_path)
+    (fake.root_dir / "locale" / "it-IT" / "invented.intent").write_text(
+        "qualcosa\n", encoding="utf-8")
+    with pytest.raises(AssertionError):
+        runner._get_minicroft("it-IT")
+    runner._stop_current()
+    assert booted[0].stops == 1
+
+
+def test_the_failure_does_not_leak_into_the_next_locale(stubbed_boot, tmp_path):
+    """A recorded failure is the current locale's, not the suite's.
+
+    After a stale-install failure on one locale, a locale change re-boots and
+    re-verifies. With a matching install, the next locale must run.
+    """
+    fake, booted = stubbed_boot
+    fake.root_dir = _install_copy(tmp_path)
+    (fake.root_dir / "locale" / "it-IT" / "invented.intent").write_text(
+        "qualcosa\n", encoding="utf-8")
+    with pytest.raises(AssertionError):
+        runner._get_minicroft("it-IT")
+
+    fake.root_dir = REPO_ROOT
+    mc = runner._get_minicroft("de-DE")
+    assert mc is booted[-1]
+    assert runner._CURRENT["error"] is None
