@@ -6,3 +6,9 @@ ini {sentence}
 ini {sentence} deffir-i
 mmeslay {sentence}
 mmeslay {sentence} deffir-i
+ales seld-i {sentence}
+ales {sentence} seld-i
+ini seld-i {sentence}
+ini {sentence} seld-i
+hder {sentence}
+hder {sentence} seld-i
