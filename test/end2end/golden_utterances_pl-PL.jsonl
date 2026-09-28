@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-parrot.openvoiceos", "utterance": "powtórzyć dzień dobry", "lang": "pl-PL", "intent_label": "speak.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-parrot.openvoiceos", "utterance": "Słyszysz to?", "lang": "pl-PL", "intent_label": "did_you_hear_me.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-parrot.openvoiceos", "utterance": "Powtórzysz?", "lang": "pl-PL", "intent_label": "repeat_tts.intent", "intent_type": "padacioso", "needs_manual": false, "machine_generated": true}
