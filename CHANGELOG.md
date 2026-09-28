@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.0a3](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.0a3) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.11.0a2...0.11.0a3)
+
+**Merged pull requests:**
+
+- test: multilang runner reads its locales from the golden files on disk [\#171](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/171) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.11.0a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.0a2) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.11.0a1...0.11.0a2)
@@ -337,17 +345,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.25a1...0.1.25)
 
-**Merged pull requests:**
-
-- Release 0.1.25a1 [\#67](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/67) ([github-actions[bot]](https://github.com/apps/github-actions))
-
 ## [0.1.25a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.25a1) (2025-06-10)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.24...0.1.25a1)
-
-**Merged pull requests:**
-
-- fix: stop [\#66](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/66) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.24](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.24) (2025-06-07)
 
