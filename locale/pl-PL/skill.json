@@ -1,0 +1,19 @@
+{
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
+  "name": "Parrot",
+  "description": "Turn OpenVoiceOS into a echoing parrot! Make OVOS repeat whatever you want.",
+  "examples": [
+    "Słyszałeś?",
+    "Co usłyszałeś?",
+    "Powtórz?",
+    "tryb papugi",
+    "papużka anuluj"
+  ],
+  "tags": [
+    "parrot",
+    "echo",
+    "repeater",
+    "entertainment"
+  ]
+}
