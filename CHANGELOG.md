@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.0a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.0a2) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.11.0a1...0.11.0a2)
+
+**Merged pull requests:**
+
+- locale: draft pl-PL ru-RU from en-US \(machine translation, unvouched\) [\#169](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/169) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.11.0a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.0a1) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.10.0a1...0.11.0a1)
@@ -345,17 +353,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.24a1...0.1.24)
 
-**Merged pull requests:**
-
-- Release 0.1.24a1 [\#65](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/65) ([github-actions[bot]](https://github.com/apps/github-actions))
-
 ## [0.1.24a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.24a1) (2025-06-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.23...0.1.24a1)
-
-**Merged pull requests:**
-
-- fix:workshop 7.0.0 compat [\#64](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/64) ([JarbasAl](https://github.com/JarbasAl))
 
 ## [0.1.23](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.23) (2025-06-07)
 
