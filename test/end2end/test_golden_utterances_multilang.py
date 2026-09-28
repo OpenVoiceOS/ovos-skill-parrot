@@ -40,10 +40,9 @@ PIPELINE = [
 END2END_DIR = Path(__file__).parent
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
-LANGS = [
-    "ca-ES", "da-DK", "de-DE", "en-US", "es-ES", "eu-ES", "fa-IR", "fr-FR",
-    "gl-ES", "it-IT", "kab", "nl-NL", "oc-FR", "pt-BR", "pt-PT", "sv-SE",
-]
+LANGS = sorted(p.stem.split("golden_utterances_", 1)[1]
+               for p in END2END_DIR.glob("golden_utterances_*.jsonl"))
+assert LANGS, "no golden_utterances_<lang>.jsonl files found"
 
 CROSS_LANG_NEGATIVES = [
     ("tell me a joke", "de-DE", "other-skill (jokes) phrasing, german session"),
@@ -60,6 +59,7 @@ def _candidates(skill_id: str, intent_label: str) -> set:
 def _load_rows(lang):
     path = END2END_DIR / f"golden_utterances_{lang}.jsonl"
     rows = []
+    needs_manual = 0
     with open(path, encoding="utf-8") as f:
         for line in f:
             line = line.strip()
@@ -67,8 +67,10 @@ def _load_rows(lang):
                 continue
             row = json.loads(line)
             if row.get("needs_manual"):
+                needs_manual += 1
                 continue
             rows.append(row)
+    assert rows or needs_manual, f"{lang}: no golden rows"
     return rows
 
 
