@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.0a5](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.0a5) (2026-10-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.11.0a4...0.11.0a5)
+
+**Merged pull requests:**
+
+- fix\(fa-IR\): strip the terminal question mark from the intent templates [\#177](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/177) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.11.0a4](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.0a4) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.11.0a3...0.11.0a4)
@@ -334,12 +342,6 @@
 ## [0.1.26a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.26a2) (2025-10-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.26a1...0.1.26a2)
-
-**Merged pull requests:**
-
-- translation of parrot [\#72](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/72) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- translation of parrot [\#71](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/71) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- translation of parrot [\#70](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/70) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
 
 ## [0.1.26a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.26a1) (2025-09-29)
 
