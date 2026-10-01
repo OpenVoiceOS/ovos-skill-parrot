@@ -1,0 +1,24 @@
+{
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
+  "name": "Papegaai",
+  "description": "Verander OpenVoiceOS in een pratende papegaai! Laat OVOS herhalen wat je maar wilt.",
+  "examples": [
+    "zeg Welterusten, Gracie",
+    "herhaal Er was eens een middernacht somber, terwijl ik peinsde, zwak en moe",
+    "spreek Ik kan alles zeggen wat je wilt!",
+    "Herhaal wat je net zei",
+    "Herhaal dat",
+    "Kun je dat herhalen?",
+    "Wat zei ik net?",
+    "Vertel me wat ik net zei.",
+    "start papegaai",
+    "stop papegaai"
+  ],
+  "tags": [
+    "papegaai",
+    "echo",
+    "herhaler",
+    "entertainment"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
+  "name": "Perroquet",
+  "description": "Transforme OpenVoiceOS en perroquet qui répète ce que vous dites.",
+  "examples": [
+    "Dis bonsoir, Gracie",
+    "Répète il était une fois",
+    "Qu'est-ce que tu viens de dire ?",
+    "Qu'est-ce que je viens de dire ?",
+    "Démarre le mode perroquet",
+    "Arrête le mode perroquet"
+  ],
+  "tags": [
+    "perroquet",
+    "écho",
+    "répétiteur",
+    "divertissement"
+  ]
+}
