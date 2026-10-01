@@ -7,9 +7,10 @@ locale under locale/ ships real .intent content for all six. Each golden
 row is a literal resolution of that locale's own .intent template lines --
 (a|b) alternatives and [a|b]/(a|) optional groups resolve to one concrete
 choice -- with speak.intent's {sentence} free slot filled with a fixed
-"hello world" placeholder (the slot generalizes to any text; it is not a
-closed vocabulary to translate). No translated or invented prose is
-introduced.
+placeholder: "hello world", or a word from that locale's own dialog files
+(the slot generalizes to any text; it is not a closed vocabulary to
+translate). Rows marked needs_manual run like every other row; the mark
+says no native speaker vouched for them, not that they are exempt.
 
 Unlike ovos-skill-alerts' shared-MiniCroft-with-secondary-langs approach
 (blocked by ovoscope#179 at multi-locale scale), this suite follows the
@@ -58,19 +59,9 @@ def _candidates(skill_id: str, intent_label: str) -> set:
 
 def _load_rows(lang):
     path = END2END_DIR / f"golden_utterances_{lang}.jsonl"
-    rows = []
-    needs_manual = 0
     with open(path, encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            row = json.loads(line)
-            if row.get("needs_manual"):
-                needs_manual += 1
-                continue
-            rows.append(row)
-    assert rows or needs_manual, f"{lang}: no golden rows"
+        rows = [json.loads(line) for line in f if line.strip()]
+    assert rows, f"{lang}: no golden rows"
     return rows
 
 
