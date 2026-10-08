@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.0a6](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.0a6) (2026-10-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.11.0a5...0.11.0a6)
+
+**Merged pull requests:**
+
+- test: golden utterances for every intent in every shipped locale [\#175](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/175) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.11.0a5](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.0a5) (2026-10-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.11.0a4...0.11.0a5)
@@ -334,10 +342,6 @@
 ## [0.1.26a3](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.26a3) (2025-12-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.1.26a2...0.1.26a3)
-
-**Merged pull requests:**
-
-- chore: Configure Renovate [\#73](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/73) ([renovate[bot]](https://github.com/apps/renovate))
 
 ## [0.1.26a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.1.26a2) (2025-10-08)
 
