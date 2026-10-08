@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.1a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.1a1) (2026-10-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.11.0a6...0.11.1a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): es-ES golden rows carry a question mark no template produces [\#179](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/179) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.11.0a6](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.0a6) (2026-10-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.11.0a5...0.11.0a6)
