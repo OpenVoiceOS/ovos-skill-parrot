@@ -1,0 +1,22 @@
+{
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
+  "name": "Papagaio",
+  "description": "Transforma o OpenVoiceOS num papagaio! Faz o OVOS repetir o que quiseres.",
+  "examples": [
+    "diz Boa noite",
+    "repete Era uma vez uma noite sombria",
+    "fala eu posso dizer o que quiseres",
+    "repete o que disseste",
+    "repete isso",
+    "podes repetir isso",
+    "o que é que eu disse",
+    "modo papagaio"
+  ],
+  "tags": [
+    "papagaio",
+    "eco",
+    "repetidor",
+    "entretenimento"
+  ]
+}
