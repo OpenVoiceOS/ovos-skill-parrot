@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.1a2](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.1a2) (2026-10-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.11.1a1...0.11.1a2)
+
+**Merged pull requests:**
+
+- test: natural golden rows and an m2v golden gate in every locale [\#182](https://github.com/OpenVoiceOS/ovos-skill-parrot/pull/182) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.11.1a1](https://github.com/OpenVoiceOS/ovos-skill-parrot/tree/0.11.1a1) (2026-10-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-parrot/compare/0.11.0a6...0.11.1a1)
