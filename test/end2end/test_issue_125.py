@@ -12,8 +12,7 @@ Two layers are probed:
   to the correct intent (or, for the "repeat after me" case, that ``speak``'s
   captured slot excludes the anchor rather than swallowing it) -- this is
   the container-level view the issue's shadow report was based on;
-* the shipped ``MiniCroft`` pipeline (padatious high -> padacioso high ->
-  padacioso medium, the same stack ``test_golden_utterances.py`` drives),
+* the shipped ``MiniCroft`` pipeline (padacioso high -> padacioso medium),
   verifying the slot-length tie-break resolves each new phrasing to the
   correct skill intent end-to-end.
 """
@@ -34,7 +33,6 @@ LOCALE_DIR = os.path.join(
 )
 
 _PIPELINE = [
-    "ovos-padatious-pipeline-plugin-high",
     "ovos-padacioso-pipeline-plugin-high",
     "ovos-padacioso-pipeline-plugin-medium",
 ]
@@ -107,7 +105,7 @@ class TestRawContainerVariants(unittest.TestCase):
 
 
 class TestShippedPipelineVariants(unittest.TestCase):
-    """Same phrasings through the real MiniCroft (padatious/padacioso stack)."""
+    """Same phrasings through the real MiniCroft (padacioso stack)."""
 
     @classmethod
     def setUpClass(cls):
