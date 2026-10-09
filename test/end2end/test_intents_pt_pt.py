@@ -15,7 +15,6 @@ SKILL_ID = "ovos-skill-parrot.openvoiceos"
 LANG = "pt-PT"
 
 _PIPELINE = [
-    "ovos-padatious-pipeline-plugin-high",
     "ovos-padacioso-pipeline-plugin-high",
     "ovos-padacioso-pipeline-plugin-medium",
 ]

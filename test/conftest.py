@@ -1,9 +1,8 @@
 """Pytest collection config for the test suite.
 
 The ``test/end2end/`` suite is an ovoscope-driven end-to-end suite that requires
-the heavy e2e stack (``ovoscope`` + ``ovos-core[plugins,lgpl]``, which needs
-swig/libfann system headers). It is exercised by the dedicated ``ovoscope`` CI
-job (``install_extras: 'end2end'`` + ``require_padatious: true``).
+the heavy e2e stack (``ovoscope`` + ``ovos-core[plugins,lgpl]``). It is
+exercised by the dedicated ``ovoscope`` CI job (``install_extras: 'test'``).
 
 The lightweight ``build_tests``/``coverage`` jobs install only the ``test``
 extra and scan the whole ``test/`` tree, so without ovoscope present pytest

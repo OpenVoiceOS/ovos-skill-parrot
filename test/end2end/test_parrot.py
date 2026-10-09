@@ -49,7 +49,7 @@ class TestParrotSkill(TestCase):
         the echoed text and its bus namespace vary across stacks.
         """
         session = Session("123")
-        session.pipeline = ["ovos-padatious-pipeline-plugin-high"]
+        session.pipeline = ["ovos-padacioso-pipeline-plugin-high"]
 
         message = Message(
             "recognizer_loop:utterance",
@@ -98,7 +98,7 @@ class TestParrotSkill(TestCase):
         for phrase in ["hello world", "the quick brown fox jumps"]:
             with self.subTest(phrase=phrase):
                 session = Session(f"echo-{phrase}")
-                session.pipeline = ["ovos-padatious-pipeline-plugin-high"]
+                session.pipeline = ["ovos-padacioso-pipeline-plugin-high"]
                 message = Message(
                     "recognizer_loop:utterance",
                     {"utterances": [f"say {phrase}"], "lang": "en-US"},

@@ -27,7 +27,7 @@ from pathlib import Path
 
 import pytest
 
-from .test_golden_utterances_multilang import (
+from .test_golden_utterances import (
     REPO_ROOT, SKILL_ID, _assert_the_loaded_skill_matches_this_checkout,
 )
 
