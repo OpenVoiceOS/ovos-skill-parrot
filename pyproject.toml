@@ -22,7 +22,7 @@ test = [
     "pytest>=5.2.4",
     "pytest-cov>=2.8.1",
     "ovoscope>=1.11.2a1",
-    "ovos-m2v-pipeline>=0.32.0a1",
+    "ovos-m2v-pipeline>=0.37.3a1",
     "ovos-bus-client",
     "ovos-core[plugins,lgpl]>=2.0.0a1",
 ]
