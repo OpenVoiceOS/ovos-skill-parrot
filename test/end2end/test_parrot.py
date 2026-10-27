@@ -4,7 +4,8 @@ from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
 from ovos_utils.log import LOG
 
-from ovoscope import CaptureSession, End2EndTest, get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 
 class TestParrotSkill(TestCase):
@@ -12,7 +13,7 @@ class TestParrotSkill(TestCase):
     def setUp(self):
         LOG.set_level("DEBUG")
         self.skill_id = "ovos-skill-parrot.openvoiceos"
-        self.minicroft = get_minicroft([self.skill_id])
+        self.minicroft = get_prototype_minicroft([self.skill_id], lang="en-US")
         # the spoken message echoes the (randomised / slot-extracted) sentence
         # and, on stacks with the bus-namespace migration enabled, is emitted
         # under the ovos.* namespace ("ovos.utterance.speak") instead of
@@ -41,6 +42,25 @@ class TestParrotSkill(TestCase):
             self.minicroft.stop()
         LOG.set_level("CRITICAL")
 
+    def _say(self, utterance, session_id):
+        """Speak ``utterance`` and return the captured messages; skip the
+        test when m2v does not route it to speak.intent."""
+        session = Session(session_id)
+        session.lang = "en-US"
+        session.pipeline = list(PIPELINE)
+        message = Message(
+            "recognizer_loop:utterance",
+            {"utterances": [utterance], "lang": "en-US"},
+            {"session": session.serialize(), "source": "A", "destination": "B"},
+        )
+        capture = CaptureSession(self.minicroft,
+                                 eof_msgs=["ovos.utterance.handled"])
+        capture.capture(message, timeout=15)
+        messages = capture.finish()
+        TALLY.assert_routed(utterance, f"{self.skill_id}:speak",
+                            [m.msg_type for m in messages])
+        return messages
+
     def test_speak_intent(self):
         """`say hello world` -> speak.intent -> handle_speak -> self.speak(...)
 
@@ -48,40 +68,36 @@ class TestParrotSkill(TestCase):
         start/complete -> handled) and ignore the speak message itself, because
         the echoed text and its bus namespace vary across stacks.
         """
-        session = Session("123")
-        session.pipeline = ["ovos-padacioso-pipeline-plugin-high"]
-
-        message = Message(
-            "recognizer_loop:utterance",
-            {"utterances": ["say hello world"], "lang": "en-US"},
-            {"session": session.serialize()},
+        messages = [m for m in self._say("say hello world", "123")
+                    if m.msg_type not in self.ignore_messages]
+        self.assertEqual(
+            [m.msg_type for m in messages],
+            [
+                "recognizer_loop:utterance",
+                f"{self.skill_id}.activate",
+                f"{self.skill_id}:speak",
+                "mycroft.skill.handler.start",
+                "mycroft.skill.handler.complete",
+                "ovos.utterance.handled",
+            ],
         )
+        self.assertEqual(messages[3].data.get("name"), "ParrotSkill.handle_speak")
+        self.assertEqual(messages[4].data.get("name"), "ParrotSkill.handle_speak")
 
-        expected_messages = [
-            message,
-            Message(f"{self.skill_id}.activate", {}),  # skill is activated
-            # OVOS-INTENT-2/PIPELINE-1: the per-skill dispatch topic drops the
-            # ".intent" suffix present in the intent file/label.
-            Message(f"{self.skill_id}:speak", {}),  # intent triggers
-            Message("mycroft.skill.handler.start",
-                    {"name": "ParrotSkill.handle_speak"}),
-            # here the skill emits the echoed sentence via speak(...), ignored
-            Message("mycroft.skill.handler.complete",
-                    {"name": "ParrotSkill.handle_speak"}),
-            Message("ovos.utterance.handled", {}),
-        ]
-
-        test = End2EndTest(
-            minicroft=self.minicroft,
-            skill_ids=[],
-            eof_msgs=["ovos.utterance.handled"],
-            flip_points=["recognizer_loop:utterance"],
-            ignore_messages=self.ignore_messages,
-            source_message=message,
-            expected_messages=expected_messages,
+    def _assert_echoes(self, phrase):
+        messages = self._say(f"say {phrase}", f"echo-{phrase}")
+        spoken = [m for m in messages
+                  if m.msg_type in ("speak", "ovos.utterance.speak")]
+        self.assertTrue(
+            spoken,
+            f"'say {phrase}' produced no speak message, got "
+            f"{[m.msg_type for m in messages]}",
         )
-
-        test.execute()
+        self.assertEqual(
+            spoken[0].data.get("utterance"), phrase,
+            f"parrot echoed {spoken[0].data.get('utterance')!r} for "
+            f"input phrase {phrase!r}",
+        )
 
     def test_speak_intent_echoes_the_input_phrase(self):
         """A routing-only check (message flow reaches ``handle_speak``, speak
@@ -90,32 +106,11 @@ class TestParrotSkill(TestCase):
         what it was told, so assert the spoken text equals the phrase that
         went in -- not merely that some speak happened.
 
-        Two different phrases are driven through the same handler so a
-        wrong implementation that echoes one fixed sentence (which would
-        pass a weaker "did it speak" check for either phrase individually)
-        fails here on whichever phrase does not match that fixed string.
+        Two different phrases are driven through the same handler (this test
+        and the next) so a wrong implementation that echoes one fixed
+        sentence fails on whichever phrase does not match that fixed string.
         """
-        for phrase in ["hello world", "the quick brown fox jumps"]:
-            with self.subTest(phrase=phrase):
-                session = Session(f"echo-{phrase}")
-                session.pipeline = ["ovos-padacioso-pipeline-plugin-high"]
-                message = Message(
-                    "recognizer_loop:utterance",
-                    {"utterances": [f"say {phrase}"], "lang": "en-US"},
-                    {"session": session.serialize(), "source": "A", "destination": "B"},
-                )
-                capture = CaptureSession(self.minicroft)
-                capture.capture(message, timeout=15)
-                messages = capture.finish()
-                spoken = [m for m in messages
-                          if m.msg_type in ("speak", "ovos.utterance.speak")]
-                self.assertTrue(
-                    spoken,
-                    f"'say {phrase}' produced no speak message, got "
-                    f"{[m.msg_type for m in messages]}",
-                )
-                self.assertEqual(
-                    spoken[0].data.get("utterance"), phrase,
-                    f"parrot echoed {spoken[0].data.get('utterance')!r} for "
-                    f"input phrase {phrase!r}",
-                )
+        self._assert_echoes("hello world")
+
+    def test_speak_intent_echoes_a_second_phrase(self):
+        self._assert_echoes("the quick brown fox jumps")

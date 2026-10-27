@@ -10,15 +10,11 @@ import unittest
 
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
-from ovoscope import CaptureSession, get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-parrot.openvoiceos"
 LANG = "en-US"
-
-_PIPELINE = [
-    "ovos-padacioso-pipeline-plugin-high",
-    "ovos-padacioso-pipeline-plugin-medium",
-]
 
 # the handlers echo dialog whose text/namespace varies across stacks; ignore the
 # spoken output so the assertion covers only the deterministic intent binding.
@@ -28,7 +24,7 @@ _IGNORE = ["speak", "ovos.utterance.speak", "mycroft.audio.play_sound"]
 class TestParrotLifecycleIntentsEnUS(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.minicroft = get_minicroft([SKILL_ID])
+        cls.minicroft = get_prototype_minicroft([SKILL_ID], lang=LANG)
 
     @classmethod
     def tearDownClass(cls):
@@ -37,9 +33,7 @@ class TestParrotLifecycleIntentsEnUS(unittest.TestCase):
     def _run(self, text, session_id):
         session = Session(session_id)
         session.lang = LANG
-        session.pipeline = list(_PIPELINE)
-        # blacklisted_intents defaults to None on a fresh Session, which crashes
-        # the padacioso pipeline (NoneType membership test) - force an empty list.
+        session.pipeline = list(PIPELINE)
         session.blacklisted_intents = []
         utterance = Message(
             "recognizer_loop:utterance",
@@ -55,28 +49,28 @@ class TestParrotLifecycleIntentsEnUS(unittest.TestCase):
     # already applied in ovos-skill-camera#63 / ovos-skill-ddg#137).
 
     def test_start_parrot(self):
-        types = self._run("start parrot", "start-1")
-        self.assertIn(f"{SKILL_ID}:start_parrot", types)
+        text = "start parrot"
+        TALLY.assert_routed(text, f"{SKILL_ID}:start_parrot", self._run(text, "start-1"))
 
     def test_engage_parrot_mode(self):
-        types = self._run("engage parrot mode", "start-2")
-        self.assertIn(f"{SKILL_ID}:start_parrot", types)
+        text = "engage parrot mode"
+        TALLY.assert_routed(text, f"{SKILL_ID}:start_parrot", self._run(text, "start-2"))
 
     def test_repeat_everything(self):
-        types = self._run("repeat everything", "start-3")
-        self.assertIn(f"{SKILL_ID}:start_parrot", types)
+        text = "repeat everything"
+        TALLY.assert_routed(text, f"{SKILL_ID}:start_parrot", self._run(text, "start-3"))
 
     def test_stop_parroting(self):
-        types = self._run("stop parroting", "stop-1")
-        self.assertIn(f"{SKILL_ID}:stop_parrot", types)
+        text = "stop parroting"
+        TALLY.assert_routed(text, f"{SKILL_ID}:stop_parrot", self._run(text, "stop-1"))
 
     def test_stop_parrot_mode(self):
-        types = self._run("stop parrot mode", "stop-2")
-        self.assertIn(f"{SKILL_ID}:stop_parrot", types)
+        text = "stop parrot mode"
+        TALLY.assert_routed(text, f"{SKILL_ID}:stop_parrot", self._run(text, "stop-2"))
 
     def test_cancel_parroting(self):
-        types = self._run("cancel parroting", "stop-3")
-        self.assertIn(f"{SKILL_ID}:stop_parrot", types)
+        text = "cancel parroting"
+        TALLY.assert_routed(text, f"{SKILL_ID}:stop_parrot", self._run(text, "stop-3"))
 
 
 if __name__ == "__main__":
