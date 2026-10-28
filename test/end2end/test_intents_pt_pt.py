@@ -9,15 +9,11 @@ import unittest
 
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
-from ovoscope import CaptureSession, get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-parrot.openvoiceos"
 LANG = "pt-PT"
-
-_PIPELINE = [
-    "ovos-padacioso-pipeline-plugin-high",
-    "ovos-padacioso-pipeline-plugin-medium",
-]
 
 # the handlers echo dialog whose text/namespace varies across stacks; ignore the
 # spoken output so the assertion covers only the deterministic intent binding.
@@ -27,7 +23,7 @@ _IGNORE = ["speak", "ovos.utterance.speak", "mycroft.audio.play_sound"]
 class TestParrotIntentsPtPT(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.minicroft = get_minicroft([SKILL_ID], lang=LANG)
+        cls.minicroft = get_prototype_minicroft([SKILL_ID], lang=LANG)
 
     @classmethod
     def tearDownClass(cls):
@@ -36,9 +32,7 @@ class TestParrotIntentsPtPT(unittest.TestCase):
     def _run(self, text, session_id):
         session = Session(session_id)
         session.lang = LANG
-        session.pipeline = list(_PIPELINE)
-        # blacklisted_intents defaults to None on a fresh Session, which crashes
-        # the padacioso pipeline (NoneType membership test) - force an empty list.
+        session.pipeline = list(PIPELINE)
         session.blacklisted_intents = []
         utterance = Message(
             "recognizer_loop:utterance",
@@ -50,28 +44,28 @@ class TestParrotIntentsPtPT(unittest.TestCase):
         return [m.msg_type for m in capture.finish()]
 
     def test_start_parrot(self):
-        types = self._run("ativa o modo papagaio", "pt-start")
-        self.assertIn(f"{SKILL_ID}:start_parrot", types)
+        text = "ativa o modo papagaio"
+        TALLY.assert_routed(text, f"{SKILL_ID}:start_parrot", self._run(text, "pt-start"))
 
     def test_stop_parrot(self):
-        types = self._run("desliga o modo papagaio", "pt-stop")
-        self.assertIn(f"{SKILL_ID}:stop_parrot", types)
+        text = "desliga o modo papagaio"
+        TALLY.assert_routed(text, f"{SKILL_ID}:stop_parrot", self._run(text, "pt-stop"))
 
     def test_speak(self):
-        types = self._run("diz olá bom dia", "pt-speak")
-        self.assertIn(f"{SKILL_ID}:speak", types)
+        text = "diz olá bom dia"
+        TALLY.assert_routed(text, f"{SKILL_ID}:speak", self._run(text, "pt-speak"))
 
     def test_did_you_hear_me(self):
-        types = self._run("ouviste-me", "pt-hear")
-        self.assertIn(f"{SKILL_ID}:did_you_hear_me", types)
+        text = "ouviste-me"
+        TALLY.assert_routed(text, f"{SKILL_ID}:did_you_hear_me", self._run(text, "pt-hear"))
 
     def test_repeat_stt(self):
-        types = self._run("o que é que eu disse", "pt-stt")
-        self.assertIn(f"{SKILL_ID}:repeat_stt", types)
+        text = "o que é que eu disse"
+        TALLY.assert_routed(text, f"{SKILL_ID}:repeat_stt", self._run(text, "pt-stt"))
 
     def test_repeat_tts(self):
-        types = self._run("o que é que disseste", "pt-tts")
-        self.assertIn(f"{SKILL_ID}:repeat_tts", types)
+        text = "o que é que disseste"
+        TALLY.assert_routed(text, f"{SKILL_ID}:repeat_tts", self._run(text, "pt-tts"))
 
 
 if __name__ == "__main__":

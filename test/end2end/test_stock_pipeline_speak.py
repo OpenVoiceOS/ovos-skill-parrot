@@ -1,15 +1,11 @@
-"""On the stock pipeline, "say X" routes to speak and the skill repeats X.
+""""Say X" routes to speak and the skill repeats X.
 
 ``speak.intent`` holds two kinds of lines: ``{sentence}`` lines, which capture
 the phrase, and example lines with a literal payload and no slot, which teach
-the m2v prototype what a real request looks like. Padacioso matches an example
-line exactly, so the payload reaches the handler only when a ``{sentence}``
-line with the same leading words also matches. A locale whose example lines
-start with words that no ``{sentence}`` line starts with makes the skill
-answer with silence.
+the m2v prototype what a real request looks like. A locale whose example
+lines reach the handler with no ``sentence`` makes the skill answer with
+silence.
 
-This test boots the pipeline that ovos-config ships, not ovoscope's default,
-with each padatious stage replaced by the padacioso stage of the same tier.
 It checks the phrase the handler receives in ``sentence``, and it checks every
 example line of every locale.
 """
@@ -19,13 +15,10 @@ from pathlib import Path
 import pytest
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
-from ovos_config.config import LocalConf
-from ovos_config.locations import DEFAULT_CONFIG
-from ovoscope import CaptureSession, get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-parrot.openvoiceos"
-STOCK_PIPELINE = [stage.replace("ovos-padatious-pipeline-plugin", "ovos-padacioso-pipeline-plugin")
-                  for stage in LocalConf(DEFAULT_CONFIG)["intents"]["pipeline"]]
 LOCALE = Path(__file__).resolve().parents[2] / "locale"
 LOCALES = sorted(path.name for path in LOCALE.iterdir() if (path / "speak.intent").is_file())
 
@@ -54,48 +47,67 @@ def _example_lines(lang):
             if line.strip() and "{" not in line and not re.search(r"[(\[]", line)]
 
 
+SPEAK_CASES = [(lang, utterance, phrase)
+               for lang in sorted(SPEAK) for utterance, phrase in SPEAK[lang]]
+NOT_SPEAK_CASES = [(lang, utterance)
+                   for lang in sorted(NOT_SPEAK) for utterance in NOT_SPEAK[lang]]
+
+
 @pytest.fixture(scope="module")
-def stock(request):
-    lang = request.param
-    minicroft = get_minicroft([SKILL_ID], max_wait=200, lang=lang,
-                              default_pipeline=STOCK_PIPELINE)
-    yield lang, minicroft
-    minicroft.stop()
+def boot():
+    """One MiniCroft per locale; the cases come in locale order, so the
+    previous locale's MiniCroft stops before the next one boots."""
+    booted = {}
+
+    def _get(lang):
+        if lang not in booted:
+            for minicroft in booted.values():
+                minicroft.stop()
+            booted.clear()
+            booted[lang] = get_prototype_minicroft([SKILL_ID], max_wait=200, lang=lang)
+        return booted[lang]
+    yield _get
+    for minicroft in booted.values():
+        minicroft.stop()
 
 
 def _route(minicroft, lang, utterance):
+    """The bus message types the request fired, and this skill's intent
+    message (or None)."""
     session = Session(f"stock-{lang}-{utterance}")
     session.lang = lang
-    session.pipeline = list(STOCK_PIPELINE)
+    session.pipeline = list(PIPELINE)
     message = Message("recognizer_loop:utterance", {"utterances": [utterance], "lang": lang},
                       {"session": session.serialize(), "source": "A", "destination": "B"})
     capture = CaptureSession(minicroft, eof_msgs=["ovos.utterance.handled"])
     capture.capture(message, timeout=60)
-    return next((m for m in capture.finish() if m.msg_type.startswith(f"{SKILL_ID}:")), None)
+    messages = capture.finish()
+    intent = next((m for m in messages if m.msg_type.startswith(f"{SKILL_ID}:")), None)
+    return [m.msg_type for m in messages], intent
 
 
-@pytest.mark.parametrize("stock", sorted(SPEAK), indirect=True)
-def test_say_routes_to_speak_with_the_phrase(stock):
-    lang, minicroft = stock
-    wrong = []
-    for utterance, phrase in SPEAK[lang]:
-        intent = _route(minicroft, lang, utterance)
-        got = (intent.msg_type, (intent.data.get("sentence") or "").lower()) if intent else None
-        if got != (f"{SKILL_ID}:speak", phrase.lower()):
-            wrong.append(f"{utterance!r}: expected speak with {phrase!r}, got {got}")
-    for utterance in NOT_SPEAK.get(lang, []):
-        intent = _route(minicroft, lang, utterance)
-        if intent and intent.msg_type == f"{SKILL_ID}:speak":
-            wrong.append(f"{utterance!r}: must not route to speak, got {intent.data.get('sentence')!r}")
-    assert not wrong, "\n".join(wrong)
+@pytest.mark.parametrize("lang, utterance, phrase", SPEAK_CASES,
+                         ids=[f"{c[0]}-{c[1]}" for c in SPEAK_CASES])
+def test_say_routes_to_speak_with_the_phrase(boot, lang, utterance, phrase):
+    types, intent = _route(boot(lang), lang, utterance)
+    TALLY.assert_routed(f"[{lang}] {utterance}", f"{SKILL_ID}:speak", types)
+    assert (intent.data.get("sentence") or "").lower() == phrase.lower(), (
+        f"{utterance!r}: expected speak with {phrase!r}, got {intent.data.get('sentence')!r}")
 
 
-@pytest.mark.parametrize("stock", LOCALES, indirect=True)
-def test_every_example_line_carries_its_phrase(stock):
-    lang, minicroft = stock
+@pytest.mark.parametrize("lang, utterance", NOT_SPEAK_CASES,
+                         ids=[f"{c[0]}-{c[1]}" for c in NOT_SPEAK_CASES])
+def test_a_request_for_something_else_does_not_route_to_speak(boot, lang, utterance):
+    types, _ = _route(boot(lang), lang, utterance)
+    TALLY.assert_not_routed(f"[{lang}] {utterance}", [f"{SKILL_ID}:speak"], types)
+
+
+@pytest.mark.parametrize("lang", LOCALES)
+def test_every_example_line_carries_its_phrase(boot, lang):
+    minicroft = boot(lang)
     silent = []
     for line in _example_lines(lang):
-        intent = _route(minicroft, lang, line)
+        _, intent = _route(minicroft, lang, line)
         if intent and intent.msg_type == f"{SKILL_ID}:speak" and not (intent.data.get("sentence") or "").strip():
             silent.append(line)
     assert not silent, f"[{lang}] speak matched with no sentence, so the skill says nothing: {silent}"
