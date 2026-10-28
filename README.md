@@ -1,14 +1,16 @@
 # <img src='./icon.png' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> Parrot
 
-Turn OpenVoiceOS into a echoing parrot!
-
-Make OVOS repeat whatever you want
-
-Repeats recent audio transriptions and text to speech outputs
+Repeat any phrase back in the OpenVoiceOS voice.
 
 ## About
 
-Turn OpenVoiceOS into a parrot. Speak a phrase and listen to it repeated in OVOS's voice.
+This skill repeats a phrase you speak, or repeats the most recent transcription or text-to-speech output from OpenVoiceOS.
+
+## Install
+
+    pip install ovos-skill-parrot
+
+## Usage
 
     "Hey Mycroft, start parrot"
     "hello"
@@ -18,7 +20,6 @@ Turn OpenVoiceOS into a parrot. Speak a phrase and listen to it repeated in OVOS
     "who are you"
     who are you
     "Stop parrot"
-
 
 ## Examples
 
@@ -43,6 +44,13 @@ Turn OpenVoiceOS into a parrot. Speak a phrase and listen to it repeated in OVOS
 
 **Entertainment**
 
+## Related projects
+
+- [OpenVoiceOS/OpenVoiceOS](https://github.com/OpenVoiceOS/OpenVoiceOS) — the OpenVoiceOS platform this skill runs on
+
+## License
+
+Apache-2.0
 
 # Tutorial
 

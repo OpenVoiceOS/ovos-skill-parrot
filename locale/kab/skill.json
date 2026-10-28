@@ -1,0 +1,24 @@
+{
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
+  "name": "Bebbuc",
+  "description": "Err OpenVoiceOS d bebbuc ara ialsen! Sers ɣef OVOS ad d-yales ayen tebɣiḍ.",
+  "examples": [
+    "ini iḍelli n lxir, Gracie",
+    "ales Yiwen n yiḍ n tegrest yerkan, mi lliɣ xemmemeɣ, ɛeggḍeɣ akked wexṣas, ɣef waṭas n yidlisen yettwattun",
+    "mmeslay zemreɣ ad iniɣ ayen tebɣiḍ!",
+    "Ales ayen i [tura kan] tenniḍ",
+    "Ales-t",
+    "Tzemreḍ ad t-tealseḍ?",
+    "D acu i [tura kan] nniɣ?",
+    "Ini-yi d acu i [tura kan] nniɣ.",
+    "bdu bebbuc",
+    "ssenseɣ bebbuc"
+  ],
+  "tags": [
+    "parrot",
+    "echo",
+    "repeater",
+    "entertainment"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "skill_id": "ovos-skill-parrot.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-parrot",
+  "name": "Loroa",
+  "description": "Bihurtu OpenVoiceOS loro oihartzun bat! Egin OVOSek nahi duzuna errepika dezan.",
+  "examples": [
+    "esan Gau on, Gracie",
+    "errepikatu Behin, gauerdi ilun batean, ahul eta nekaturik pentsatzen nengoen bitartean, ahaztutako jakinduriaren liburu bitxi eta arraroez",
+    "hitz egin Zuk nahi duzuna esan dezaket!",
+    "Errepikatu zuk esan berri duzuna",
+    "Errepikatu hori",
+    "Errepika dezakezu hori?",
+    "Zer esan dut orain?",
+    "Esadazu zer esan dudan.",
+    "hasi loroa",
+    "gelditu loroa"
+  ],
+  "tags": [
+    "loroa",
+    "oihartzuna",
+    "errepikagailua",
+    "entretenimendua"
+  ]
+}

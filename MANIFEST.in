@@ -1,3 +1,6 @@
 recursive-include locale *
 recursive-include gui *
 include *.txt
+include requirements.txt
+include test/requirements.txt
+include test/requirements-end2end.txt
